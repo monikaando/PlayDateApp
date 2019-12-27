@@ -12,6 +12,7 @@ let options = {
     useNewUrlParser: true,
     useUnifiedTypology: true
 }
+
 mongoose.connect("mongodb://localhost:27017/PlayDateApp", options, (err, connectionInfo) => {
     if (err) console.log(err);
     else console.log("connected to database")
@@ -62,7 +63,14 @@ app.listen(3000, () => {
     console.log("Webserver is listening");
 })
 
+
+
 // install:
 // npm init -y
-// npm install mongoose express hbs body-parser express-session http-errors --s
+// npm install mongoose express hbs body-parser express-session http-errors slick-carousel --s
 // sudo npm install nodemon -g
+
+
+
+//nodemon app.js
+//nodemon app.js -e“js bs”

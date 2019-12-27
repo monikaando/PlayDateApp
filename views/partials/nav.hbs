@@ -1,33 +1,33 @@
-<ul class="nav">
+<ul class="navigation">
   <div>
-  <li class="nav-item">
-    <a class="nav-link" href="/">Home</a>
+  <li class="navigation-item">
+    <a class="navigation-link" href="/">Home</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="/friends">Friends</a>
+  <li class="navigation-item">
+    <a class="navigation-link" href="/friends">Friends</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="/create">Create a friend</a>
+  <li class="navigation-item">
+    <a class="navigation-link" href="/create">Create a friend</a>
   </li>
 
 </div>
 <div>
     {{#if user}}
-    <li class="nav-item">
-        <a class="nav-link">Hello {{user.username}}</a>
+    <li class="navigation-item">
+        <a class="navigation-link">Hello {{user.username}}</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/logout">Log out</a>
+      <li class="navigation-item">
+        <a class="navigation-link" href="/logout">Log out</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/user/upload-profile-pic">Profile</a> 
+      <li class="navigation-item">
+        <a class="navigation-link" href="/user/upload-profile-pic">Profile</a> 
       </li>
      {{else}}
-     <li class="nav-item">
-          <a class="nav-link" href="/signup">Sign up</a>
+     <li class="navigation-item">
+          <a class="navigation-link" href="/signup">Sign up</a>
       </li>
-      <li class="nav-item">
-          <a class="nav-link" href="/login">Log in</a>
+      <li class="navigation-item">
+          <a class="navigation-link" href="/login">Log in</a>
       </li>
     {{/if}}
 </div>
