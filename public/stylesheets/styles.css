@@ -54,15 +54,15 @@ body {
     width: 170px;
     padding: 70px 0;
     margin: 40px 10px 20px 10px;
-    border: 2px solid rgb(247, 118, 140);
-    background-color: rgba(255, 145, 163, 0.199);
+    border: 2px solid #293a80;
+    background-color: rgba(125, 181, 245, 0.199);
     border-radius: 2px;
     justify-content: center;
 }
 
 .weekend {
-    border: 2px solid #293a80;
-    background-color: rgba(125, 181, 245, 0.199);
+    border: 2px solid rgb(247, 118, 140);
+    background-color: rgba(255, 145, 163, 0.199);
 }
 
 
