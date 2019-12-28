@@ -12,7 +12,7 @@
 <h2 class="centered">Your Play Buddies</h2>
 <div class="carousel">
       <div class="nav nav-left">
-        <div class="ion-chevron-left carousel-arrow-icon-left"></div>
+        <div class="fa fa-chevron-left carousel-arrow-icon-left" aria-hidden="true"></div>
       </div>
 
         <div class="carousel-content">
@@ -99,7 +99,7 @@
         </div>
 
       <div class="nav nav-right">
-        <div class="ion-chevron-right carousel-arrow-icon-right"></div>
+        <div class="fa fa-chevron-right carousel-arrow-icon-right" aria-hidden="true"></div>
       </div>
     </div>
     
@@ -120,7 +120,6 @@ function addClone() {
    lastSlide.style.left = (-lengthOfSlide) + "px";
    carouselContent.insertBefore(lastSlide, carouselContent.firstChild);
 }
-// addClone();
 
 function removeClone() {
   var firstSlide = carouselContent.firstElementChild;

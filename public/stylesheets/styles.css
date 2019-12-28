@@ -109,15 +109,10 @@ body {
     position: absolute;
     top: 42%;
     margin-top: -10px;
-    background-color: rgba(150, 150, 150, .3);
-    width: 20px;
-    height: 20px;
     z-index: 2;
     cursor: pointer;
-    border-radius: 50%;
-    border: none;
-    outline: none;
-    color: white;
+    color: #293a80;
+    font-size: 1.3em;
     -webkit-user-select: none;
 }
 
