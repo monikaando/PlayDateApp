@@ -38,8 +38,8 @@ function protect(req, res, next) {
     if (req.session.currentUser) {
         next();
     } else {
-        // req.session.redirectUrl = req.originalUrl;
-        // res.redirect("/login")
+        req.session.redirectUrl = req.originalUrl;
+        res.redirect("user/login")
         next(createError(401, "Please log in to view this page"))
     };
 }
@@ -57,7 +57,8 @@ app.use((err, req, res, next) => {
     console.log(err)
     res.render("error", err)
 })
-
+app.use("/", require("./routes/signup"));
+app.use("/", require("./routes/login"));
 
 app.listen(3000, () => {
     console.log("Webserver is listening");
@@ -67,10 +68,11 @@ app.listen(3000, () => {
 
 // install:
 // npm init -y
-// npm install mongoose express hbs body-parser express-session http-errors slick-carousel --s
+// npm install mongoose express hbs body-parser express-session http-errors slick-carousel mongoose-bcrypt--s
 // sudo npm install nodemon -g
 
 
-
+//run:
 //nodemon app.js
-//nodemon app.js -e“js bs”
+//updating also hbs files
+//nodemon app.js -e“js hbs”

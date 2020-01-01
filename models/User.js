@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const Sechema = mongoose.Schema;
+const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
     username: { type: String, required: true },
@@ -8,7 +8,7 @@ const userSchema = new Schema({
     guardian: { type: String, enum: ['mother', 'father', 'sister', 'brother', 'baby sitter', 'other'] },
     phone: { type: String, required: false, validate: /^\d{10}$/ },
     email: { type: String, required: true },
-})
+});
 
 const User = mongoose.model("User", userSchema);
 module.exports = User;
