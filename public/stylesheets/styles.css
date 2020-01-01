@@ -3,6 +3,7 @@ body {
     font-size: 16px;
     margin: 0;
     padding: 0;
+    color: #293a80;
 }
 
 .index-page {
@@ -161,7 +162,8 @@ body {
 
 form {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .form-title {
@@ -219,8 +221,8 @@ button {
 }
 
 .signup-img img {
-    width: 40%;
-    margin-right: 15%;
+    width: 35%;
+    margin-right: 10%;
 }
 
 .login-img {
@@ -230,7 +232,7 @@ button {
 
 .login-img img {
     width: 40%;
-    margin-top: 5%;
+    margin-top: 2%;
 }
 
 
@@ -252,8 +254,40 @@ button {
 .red {
     display: flex;
     justify-content: center;
-    color: rgb(212, 0, 0);
     font-size: 3em;
+}
+
+.error-page {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: rgb(212, 0, 0);
+}
+
+.error-description {
+    text-decoration: underline;
+}
+
+.error-message {
+    background: #F02B63;
+    box-sizing: border-box;
+    border-radius: 4px;
+    color: #fff;
+    margin: 20px auto;
+    padding: 10px;
+    width: 100%;
+    font-size: 0.7em;
+    text-align: center;
+    line-height: 1.5em;
+}
+
+.account-message {
+    font-size: 0.8em;
+    color: #757575;
+}
+
+.account-message a {
+    color: #757575;
 }
 
 

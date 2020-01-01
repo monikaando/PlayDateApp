@@ -13,7 +13,7 @@ let options = {
     useUnifiedTypology: true
 }
 
-mongoose.connect("mongodb://localhost:27017/PlayDateApp", options, (err, connectionInfo) => {
+mongoose.connect("mongodb://localhost:27017/playdate", options, (err, connectionInfo) => {
     if (err) console.log(err);
     else console.log("connected to database")
 })
@@ -38,8 +38,8 @@ function protect(req, res, next) {
     if (req.session.currentUser) {
         next();
     } else {
-        req.session.redirectUrl = req.originalUrl;
-        res.redirect("user/login")
+        // req.session.redirectUrl = req.originalUrl;
+        // res.redirect("user/login")
         next(createError(401, "Please log in to view this page"))
     };
 }
@@ -52,13 +52,19 @@ app.use((req, res, next) => {
 app.get('/', (req, res, next) => {
     res.render('index');
 });
+app.use("/", require("./routes/signup"));
+app.use("/", require("./routes/login"));
+
+
+app.use("/", (req, res, next) => {
+    next(createError(404, "Page not found"))
+})
 
 app.use((err, req, res, next) => {
     console.log(err)
     res.render("error", err)
 })
-app.use("/", require("./routes/signup"));
-app.use("/", require("./routes/login"));
+
 
 app.listen(3000, () => {
     console.log("Webserver is listening");
