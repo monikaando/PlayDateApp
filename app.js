@@ -74,7 +74,7 @@ app.listen(3000, () => {
 
 // install:
 // npm init -y
-// npm install mongoose express hbs body-parser express-session http-errors slick-carousel mongoose-bcrypt--s
+// npm install mongoose express hbs body-parser express-session http-errors slick-carousel mongoose-bcrypt --s
 // sudo npm install nodemon -g
 
 

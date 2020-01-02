@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const User = require("../models/user");
+const User = require("../models/User");
 const bcrypt = require('bcrypt');
 const createError = require('http-errors');
 const bcryptSalt = 10;
