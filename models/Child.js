@@ -7,7 +7,7 @@ const childSchema = new Schema({
     profile_pic: { type: String, default: '/images/default_user.png' },
     birthday: { type: Date },
     address: { type: String },
-    availabledays: [{ type: String, enum: ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"] }],
+    availabledays: [{ type: String }],
     foodlikes: { type: [String] },
     fooddislikes: { type: [String] },
     allergies: { type: [String] },
