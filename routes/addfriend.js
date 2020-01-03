@@ -12,6 +12,7 @@ app.post("/addfriend", (req, res, next) => {
         firstname: req.body.firstname,
         lastname: req.body.lastname,
         address: req.body.address,
+        availabledays: req.body.availabledays,
         foodlikes: req.body.foodlikes.split(","),
         fooddislikes: req.body.fooddislikes.split(","),
         allergies: req.body.allergies.split(","),

@@ -58,6 +58,7 @@ app.use("/", require("./routes/signup"));
 app.use("/", require("./routes/login"));
 app.use("/friends", require("./routes/addfriend"));
 app.use("/friends", require("./routes/friendphoto"));
+app.use("/friends", require("./routes/addcaretaker"));
 
 app.use("/", (req, res, next) => {
     next(createError(404, "Page not found"));

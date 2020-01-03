@@ -19,7 +19,7 @@ app.post("/friendphoto", upload.single("profile_pic"), function (req, res) {
         profile_pic: req.file.filename
     })
     .then(() => {
-        res.redirect("/");})
+        res.redirect("/friends/addcaretaker");})
     .catch(err => console.log(err));
     });
 
