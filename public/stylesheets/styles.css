@@ -341,6 +341,23 @@ button {
     right: 5%;
     z-index: -1;
 }
-
-
 /*END - How it Works?*/
+/* Friend Card */
+
+#friendcard {
+    width: 200px;
+    height: 250px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 2px solid #293a80;
+    background-color: rgba(125, 181, 245, 0.199);
+    padding: 10px;
+    border-radius: 2px;
+}
+
+#friendcard img {
+    width: 100%;
+}
+
+/* END - Friend Card */

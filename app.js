@@ -62,6 +62,7 @@ app.use("/user", protect, require("./routes/deleteuser"));
 app.use("/friends", require("./routes/addfriend"));
 app.use("/friends", require("./routes/friendphoto"));
 app.use("/friends", require("./routes/addcaretaker"));
+app.use("/friends", require("./routes/friendslist"));
 
 
 app.use("/", (req, res, next) => {
