@@ -1,5 +1,6 @@
-const mongoose = require("mongoose")
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
+const ObjectId = mongoose.Schema.Types.ObjectId;
 
 const childSchema = new Schema({
     firstname: { type: String, required: true },
@@ -12,7 +13,7 @@ const childSchema = new Schema({
     allergies: { type: [String] },
     activitylikes: { type: [String] },
     activitydislikes: { type: [String] },
-    caretakers: { type: [Schema.Types.ObjectId] } // add rel later
+    parent: { type: [ObjectId], ref: "caretakers"} 
 });
 
 const Child = mongoose.model("children", childSchema);
