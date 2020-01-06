@@ -4,20 +4,12 @@ body {
     margin: 0;
     padding: 0;
     color: #293a80;
+    line-height: 1.8em;
 }
 
 .centered {
     display: block;
     text-align: center;
-}
-
-.index-page {
-    height: 100vw;
-    background: url("../images/background.png") no-repeat left 100px fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
 }
 
 
@@ -51,14 +43,24 @@ body {
 /*END - Navigation*/
 
 
-/*Blocks*/
+/*Home Page*/
+
+.index-page {
+    /* height: 100vw; */
+    background: url("../images/background.png") no-repeat left 100px fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 
 .day-blocks {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
     align-items: center;
-    margin: 80px 5px 38px 0;
+    margin: 80px 5px 0 0;
+    padding-bottom: 25%;
 }
 
 .days {
@@ -86,26 +88,26 @@ body {
 }
 
 
-/*ENd - Blocks*/
+/*END - Home Page*/
 
 
-/*Add a Friend*/
+/*Add a Friend and a Caretaker*/
 
-.form-fields-add-friend {
+.form-fields-add {
     display: flex;
     flex-direction: column;
-    width: 26%;
+    width: 25%;
     margin-bottom: 60px;
 }
 
-.form-title-add-friend {
+.form-title-add {
     display: flex;
     justify-content: center;
     padding: 10px 0 30px;
     color: #293a80;
 }
 
-.legend-add-friend {
+.legend-add {
     margin: 20px 0;
 }
 
@@ -121,21 +123,29 @@ body {
     margin-bottom: 20px;
 }
 
-.add-friend-img {
+.add-img-friend {
     display: flex;
     justify-content: flex-end;
 }
 
-.add-friend-img img {
-    width: 25%;
+.add-img-friend {
+    width: 35%;
     position: absolute;
-    top: 27%;
+    top: 50%;
     right: 5%;
     z-index: -1;
 }
 
+.add-img-caretaker {
+    width: 25%;
+    position: absolute;
+    top: 55%;
+    left: 5%;
+    z-index: -1;
+}
 
-/*END - Add a Friend*/
+
+/*END - Add a Friend and a Caretaker*/
 
 
 /*Sign Up and Log in*/
@@ -304,9 +314,34 @@ button {
     width: 100%;
 }
 
+.delete {
+    margin-top: 20px;
+    text-decoration: none;
+    color: #293a80;
+}
+
 
 /*END - Profile*/
 
+
+/*How it Works?*/
+
+.howitworks {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 2% 0 0 5%;
+    width: 70%;
+}
+
+.img-description {
+    width: 30%;
+    position: absolute;
+    top: 8%;
+    right: 5%;
+    z-index: -1;
+}
+/*END - How it Works?*/
 /* Friend Card */
 
 #friendcard {
