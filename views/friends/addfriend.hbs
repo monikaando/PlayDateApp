@@ -1,10 +1,10 @@
 <form action="/friends/addfriend" method="POST">
-<div class="form-fields-add-friend">
-    <h1 class="form-title-add-friend">Add a Friend</h1>
-    <input type="text" name="firstname" placeholder="First Name">
-    <input type="text" name="lastname" placeholder="Last Name">
+<div class="form-fields-add">
+    <h1 class="form-title-add">Add a friend</h1>
+    <input type="text" name="firstname" placeholder="First name">
+    <input type="text" name="lastname" placeholder="Last name">
     <input type="text" name="address" placeholder="Address">
-    <legend class="legend-add-friend">Available Days:</legend>   
+    <legend class="legend-add">Available days:</legend>   
     <div class="available-days"> 
         <div>
             <input class="available-days-input" type="checkbox" name="availabledays" value="monday">Monday    
@@ -28,11 +28,11 @@
         <input class="available-days-input" type="checkbox" name="availabledays" value="sunday">Sunday
         </div>
     </div>
-    <input type="text" name="foodlikes" placeholder="Food They Dislike">
-    <input type="text" name="fooddislikes" placeholder="Food They Dislike">
+    <input type="text" name="foodlikes" placeholder="Most favourite food">
+    <input type="text" name="fooddislikes" placeholder="Least favourite food">
     <input type="text" name="allergies" placeholder="Allergies / Illnesses">
-    <input type="text" name="activitylikes" placeholder="Likes to Play:">
-    <input type="text" name="activitydislikes" placeholder="Does Not Like to Play:">
+    <input type="text" name="activitylikes" placeholder="Likes to play:">
+    <input type="text" name="activitydislikes" placeholder="Does not like to play:">
     <button class= "b-blue rot-135" type="submit">Add Friend</button>
 
 {{#if errorMessage }}
@@ -40,8 +40,5 @@
   {{/if}}
   </div>
 </form>
-<div class="add-friend-img">
-<img src="/images/bear.png" alt="">
-</div>
-
+<img class="add-img-friend" src="/images/bear2.png" alt="">
 
