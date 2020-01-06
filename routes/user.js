@@ -21,14 +21,4 @@ app.post("/upload-profile-pic", upload.single('profile-picture'), (req, res) => 
         })
 })
 
-// app.delete('/upload-profile-pic', (req, res) => {
-//     const { username } = req.params;
-//     db.collection('username').findOneAndDelete({ username: username },
-//         (err, result) => {
-//             if (err) return res.send(500, err)
-//             console.log('got deleted');
-//             res.redirect('/');
-//         });
-// });
-
 module.exports = app;
