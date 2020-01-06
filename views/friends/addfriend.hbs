@@ -1,0 +1,30 @@
+<form action="/friends/addfriend" method="POST">
+<div class="form-fields">
+    <h1 class="form-title">Add a Friend</h1>
+    <input type="text" name="firstname" placeholder="First Name">
+    <input type="text" name="lastname" placeholder="Last Name">
+    <input type="text" name="address" placeholder="Address">
+    <legend>Available Days</legend>      
+        <input type="checkbox" name="availabledays" value="monday">Monday<br>      
+        <input type="checkbox" name="availabledays" value="tuesday">Tuesday<br>      
+        <input type="checkbox" name="availabledays" value="wednesday">Wednesday<br> 
+        <input type="checkbox" name="availabledays" value="thursday">Thursday<br>
+        <input type="checkbox" name="availabledays" value="friday">Friday<br>
+        <input type="checkbox" name="availabledays" value="saturday">Saturday<br>
+        <input type="checkbox" name="availabledays" value="sunday">Sunday<br> 
+    <input type="text" name="foodlikes" placeholder="Food They Dislike">
+    <input type="text" name="fooddislikes" placeholder="Food They Dislike">
+    <input type="text" name="allergies" placeholder="Allergies / Illnesses">
+    <input type="text" name="activitylikes" placeholder="Likes to Play:">
+    <input type="text" name="activitydislikes" placeholder="Does Not Like to Play:">
+    <button class= "b-blue rot-135" type="submit">Add Friend</button>
+
+{{#if errorMessage }}
+    <div class="error-message">{{ errorMessage }}</div>
+  {{/if}}
+  </div>
+</form>
+
+<div class="signup-img">
+<img src="/images/bee.png" alt="">
+</div>

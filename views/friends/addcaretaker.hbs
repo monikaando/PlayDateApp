@@ -1,0 +1,23 @@
+<form action="/friends/addcaretaker" method="POST">
+<div class="form-fields">
+    <h1 class="form-title">Add a Caretaker</h1>
+    <input type="text" name="firstname" placeholder="First Name">
+    <input type="text" name="lastname" placeholder="Last Name">
+    <legend>Available Days</legend>      
+        <input type="checkbox" name="availabledays" value="monday">Monday<br>      
+        <input type="checkbox" name="availabledays" value="tuesday">Tuesday<br>      
+        <input type="checkbox" name="availabledays" value="wednesday">Wednesday<br> 
+        <input type="checkbox" name="availabledays" value="thursday">Thursday<br>
+        <input type="checkbox" name="availabledays" value="friday">Friday<br>
+        <input type="checkbox" name="availabledays" value="saturday">Saturday<br>
+        <input type="checkbox" name="availabledays" value="sunday">Sunday<br> 
+    <input type="text" name="relation" placeholder="Relation">
+    <input type="text" name="phone" placeholder="Phone Number">
+    <input type="text" name="email" placeholder="E-mail Address">
+    <button class= "b-blue rot-135" type="submit">Add Caretaker</button>
+
+{{#if errorMessage }}
+    <div class="error-message">{{ errorMessage }}</div>
+  {{/if}}
+  </div>
+</form>

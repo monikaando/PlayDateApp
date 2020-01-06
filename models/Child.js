@@ -7,14 +7,14 @@ const childSchema = new Schema({
     profile_pic: { type: String, default: '/images/default_user.png' },
     birthday: { type: Date },
     address: { type: String },
-    availabledays: [{ type: String, enum: [monday, tuesday, wednesday, thursday, fruday, saturday, sunday] }],
+    availabledays: [{ type: String }],
     foodlikes: { type: [String] },
     fooddislikes: { type: [String] },
     allergies: { type: [String] },
     activitylikes: { type: [String] },
     activitydislikes: { type: [String] },
     caretakers: { type: [Schema.Types.ObjectId] }
-})
+});
 
 const Child = mongoose.model("children", childSchema);
 module.exports = Child;
