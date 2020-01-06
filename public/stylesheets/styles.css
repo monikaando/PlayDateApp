@@ -13,7 +13,7 @@ body {
 
 .index-page {
     height: 100vw;
-    background: url("../images/wallpaper8.png") no-repeat left 100px fixed;
+    background: url("../images/background.png") no-repeat left 100px fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
