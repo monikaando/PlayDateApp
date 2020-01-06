@@ -1,17 +1,33 @@
 <form action="/friends/addfriend" method="POST">
-<div class="form-fields">
-    <h1 class="form-title">Add a Friend</h1>
+<div class="form-fields-add-friend">
+    <h1 class="form-title-add-friend">Add a Friend</h1>
     <input type="text" name="firstname" placeholder="First Name">
     <input type="text" name="lastname" placeholder="Last Name">
     <input type="text" name="address" placeholder="Address">
-    <legend>Available Days</legend>      
-        <input type="checkbox" name="availabledays" value="monday">Monday<br>      
-        <input type="checkbox" name="availabledays" value="tuesday">Tuesday<br>      
-        <input type="checkbox" name="availabledays" value="wednesday">Wednesday<br> 
-        <input type="checkbox" name="availabledays" value="thursday">Thursday<br>
-        <input type="checkbox" name="availabledays" value="friday">Friday<br>
-        <input type="checkbox" name="availabledays" value="saturday">Saturday<br>
-        <input type="checkbox" name="availabledays" value="sunday">Sunday<br> 
+    <legend class="legend-add-friend">Available Days:</legend>   
+    <div class="available-days"> 
+        <div>
+            <input class="available-days-input" type="checkbox" name="availabledays" value="monday">Monday    
+        </div>  
+        <div>
+        <input class="available-days-input" type="checkbox" name="availabledays" value="tuesday">Tuesday     
+        </div> 
+        <div>
+        <input class="available-days-input" type="checkbox" name="availabledays" value="wednesday">Wednesday 
+        </div>
+        <div>
+        <input class="available-days-input" type="checkbox" name="availabledays" value="thursday">Thursday
+        </div>
+        <div>
+        <input class="available-days-input" type="checkbox" name="availabledays" value="friday">Friday
+        </div>
+        <div>
+        <input class="available-days-input" type="checkbox" name="availabledays" value="saturday">Saturday
+        </div>
+        <div>
+        <input class="available-days-input" type="checkbox" name="availabledays" value="sunday">Sunday
+        </div>
+    </div>
     <input type="text" name="foodlikes" placeholder="Food They Dislike">
     <input type="text" name="fooddislikes" placeholder="Food They Dislike">
     <input type="text" name="allergies" placeholder="Allergies / Illnesses">
@@ -24,7 +40,8 @@
   {{/if}}
   </div>
 </form>
-
-<div class="signup-img">
-<img src="/images/bee.png" alt="">
+<div class="add-friend-img">
+<img src="/images/bear.png" alt="">
 </div>
+
+
