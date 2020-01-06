@@ -8,6 +8,7 @@ body {
 
 .index-page {
     background-image: url("../images/bg_blue1.jpg");
+    height: 100vh;
 }
 
 
@@ -197,6 +198,7 @@ button {
     filter: hue-rotate(0deg);
     color: #FFF;
     text-decoration: none;
+    width: 100%;
 }
 
 .b-blue,
@@ -292,3 +294,26 @@ button {
 
 
 /*END - Error page*/
+
+
+/*Profile*/
+
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.avatar {
+    width: 20%;
+    margin: 1% 0 2%;
+}
+
+.file-input {
+    font-size: 0.7em;
+    width: 100%;
+}
+
+
+/*END - Profile*/
