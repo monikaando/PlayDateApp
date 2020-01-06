@@ -3,13 +3,14 @@
   <li class="navigation-item">
     <a class="navigation-link" href="/">Home</a>
   </li>
+   {{#if user}}
   <li class="navigation-item">
     <a class="navigation-link" href="/friends">Friends</a>
   </li>
   <li class="navigation-item">
     <a class="navigation-link" href="/friends/addfriend">Add a friend</a>
   </li>
-
+{{/if}}
 </div>
 <div>
     {{#if user}}
