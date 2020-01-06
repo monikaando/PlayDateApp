@@ -6,14 +6,13 @@ const childSchema = new Schema({
     lastname: { type: String, required: true },
     profile_pic: { type: String, default: '/images/default_user.png' },
     birthday: { type: Date },
-    address: { type: String },
     availabledays: [{ type: String }],
     foodlikes: { type: [String] },
     fooddislikes: { type: [String] },
     allergies: { type: [String] },
     activitylikes: { type: [String] },
     activitydislikes: { type: [String] },
-    caretakers: { type: [Schema.Types.ObjectId] }
+    caretakers: { type: [Schema.Types.ObjectId] } // add rel later
 });
 
 const Child = mongoose.model("children", childSchema);
