@@ -19,9 +19,9 @@ app.post("/addfriend", (req, res, next) => {
             activitydislikes: req.body.activitydislikes.split(","),
         })
         .then((child) => {
-            req.session.childID = child._id
-            res.redirect("/friends/friendphoto")
+            req.session.childID = child._id;
         })
+        .then(() => res.redirect("/friends/friendphoto"))
         .catch(error => {
             console.log(error);
             next(createError(500, "Sorry! Our database crashed. Please come back later."));

@@ -63,7 +63,7 @@ app.use("/friends", require("./routes/addfriend"));
 app.use("/friends", require("./routes/friendphoto"));
 app.use("/friends", require("./routes/addcaretaker"));
 app.use("/friends", require("./routes/friendslist"));
-
+app.use("/day", require("./routes/day"));
 
 app.use("/", (req, res, next) => {
     next(createError(404, "Page not found"));
