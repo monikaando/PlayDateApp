@@ -13,7 +13,7 @@ const childSchema = new Schema({
     allergies: { type: [String] },
     activitylikes: { type: [String] },
     activitydislikes: { type: [String] },
-    caretaker: { type: ObjectId, ref: "caretakers"} 
+    caretaker: [{ type: ObjectId, ref: "caretakers"}] 
 });
 
 const Child = mongoose.model("friends", childSchema);
