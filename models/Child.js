@@ -14,8 +14,8 @@ const childSchema = new Schema({
     allergies: { type: [String] },
     activitylikes: { type: [String] },
     activitydislikes: { type: [String] },
-    parent: { type: [ObjectId], ref: "caretakers" }
+    caretaker: [{ type: ObjectId, ref: "caretakers"}] 
 });
 
-const Child = mongoose.model("children", childSchema);
+const Child = mongoose.model("friends", childSchema);
 module.exports = Child;

@@ -21,10 +21,11 @@ app.post("/addcaretaker", (req, res, next) => {
         .then((caretaker) => {
             debugger;
             return Child.findByIdAndUpdate(req.session.childID,{
-                parent: mongoose.Types.ObjectId(caretaker.id)
-            })
+            $push: {caretaker: mongoose.Types.ObjectId(caretaker.id)}}
+            );
         })
         .then(()=> {
+            delete req.session.childID;
             res.redirect("/");
         })
         .catch(error => {

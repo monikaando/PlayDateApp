@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
 
 app.get("/:id", (req, res) => {
     Child.findById(req.params.id)
-    .populate("caretakers")
+    .populate("caretaker")
     .then(friend => res.render("friends/friend", {friend}))
     .catch(err => console.log(err));
     });

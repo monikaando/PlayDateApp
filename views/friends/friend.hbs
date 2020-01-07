@@ -1,4 +1,3 @@
-
     <div class="friend-page">
     <div class="friendcard">
         <img src="/{{friend.profile_pic}}" alt="">
@@ -20,14 +19,18 @@
         <p><b>Like to play:</b> {{friend.activitylikes}}</p>
         <p><b>Does not like to play:</b> {{friend.activitydislikes}}</p>
     </div>
-    <div class="caretaker-details">
-        <h2>Caretaker details:</h2>
-        <p><b>Name:</b> {{friend.parent.firstname}} {{friend.parent.lastname}}</p>
-        <p><b>Takes care of {{friend.firstname}} on:</b> {{friend.parent.availabledays}}</p>
-        <p><b>Relation:</b> {{friend.parent.relation}}</p>
-        <p><b>Address:</b> {{friend.parent.address}}</p>
-        <p><b>Phone Number:</b> {{friend.parent.phone}}</p>
-        <p><b>Email Address:</b> {{friend.parent.email}}</p>
+    <div class="caretaker-details"> 
+        {{#each friend.caretaker}}
+          <h2>CARETAKER</h2>
+          <p><b>Name:</b> {{this.firstname}} {{this.lastname}}</p>
+          <p><b>Takes care of {{friend.firstname}} on:</b> {{this.availabledays}}</p>
+          <p><b>Relation:</b> {{this.relation}}</p>
+          <p><b>Address:</b> {{this.address}}</p>
+          <p><b>Phone Number:</b> {{this.phone}}</p>
+          <p><b>Email Address:</b> {{this.email}}</p>
+        {{/each}}
+        
     </div>
 </div>
 </div>
+
