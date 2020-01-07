@@ -4,8 +4,8 @@ const Child = require("../models/Child");
 const createError = require('http-errors');
 
 app.get("/:day", (req, res) => {
+    req.session.day = req.params.day;
     Child.find({availabledays: req.params.day})
-    .populate("caretaker")
     .then(friends => {
         res.render("friends/friendsbyday", {friends});
     })
@@ -14,7 +14,19 @@ app.get("/:day", (req, res) => {
     });
 });
 
+app.get("/detail/:id", (req, res) => {
+    Child.findById(req.params.id)
+    .populate("caretaker")
+    .then(friend => {
+        var caretaker = friend.caretaker.filter((x)=> x.availabledays.includes(req.session.day)); 
+        res.render("friends/friendbyday", {friend, caretaker});
+    })
+    .catch(err => console.log(err));
+    });
+
+
+
 module.exports = app;
 
-// friends.filter((friend)=> returnfriend.caretaker.availabledays.includes(req.params.day)
+//   
 // ^^  Jurgen's Code for looping through friends and find the caretakers
