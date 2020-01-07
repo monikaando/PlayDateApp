@@ -8,10 +8,14 @@
 <p>Enjoys: {{friend.activitylikes}}</p>
 <p>Does not enjoy: {{friend.activitydislikes}}</p>
 
+<p>{{friend}}</p>
+
+{{#each friend.caretaker}}
 <p>CARETAKER</p>
-<p>Name: {{friend.caretaker.firstname}} {{friend.caretaker.lastname}}</p>
-<p>Takes care of {{friend.firstname}} on: {{friend.caretaker.availabledays}}</p>
-<p>Relation: {{friend.caretaker.relation}}</p>
-<p>Address: {{friend.caretaker.address}}</p>
-<p>Phone Number: {{friend.caretaker.phone}}</p>
-<p>Email Address: {{friend.caretaker.email}}</p>
+<p>Name: {{this.firstname}} {{this.lastname}}</p>
+<p>Takes care of {{friend.firstname}} on: {{this.availabledays}}</p>
+<p>Relation: {{this.relation}}</p>
+<p>Address: {{this.address}}</p>
+<p>Phone Number: {{this.phone}}</p>
+<p>Email Address: {{this.email}}</p>
+{{/each}}
