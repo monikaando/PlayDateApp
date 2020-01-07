@@ -10,6 +10,7 @@ app.post("/addfriend", (req, res, next) => {
     Child.create({
             firstname: req.body.firstname,
             lastname: req.body.lastname,
+            birthday: req.body.birthday,
             address: req.body.address,
             availabledays: req.body.availabledays,
             foodlikes: req.body.foodlikes.split(","),
