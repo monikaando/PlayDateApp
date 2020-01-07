@@ -7,8 +7,6 @@ app.get("/:day", (req, res) => {
     Child.find({availabledays: req.params.day})
     .populate("caretaker")
     .then(friends => {
-        friends.filter((friend)=> returnfriend.caretaker.availabledays.includes(req.params.day)
-        })
         res.render("friends/friendsbyday", {friends});
     })
     .catch(error => {
@@ -17,3 +15,6 @@ app.get("/:day", (req, res) => {
 });
 
 module.exports = app;
+
+// friends.filter((friend)=> returnfriend.caretaker.availabledays.includes(req.params.day)
+// ^^  Jurgen's Code for looping through friends and find the caretakers
