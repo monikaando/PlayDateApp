@@ -2,7 +2,7 @@ const express = require("express")
 const app = express()
 const User = require("../models/User")
 
-app.get("/user/upload-profile-pic", (req, res) => {
+app.get("/:id", (req, res) => {
     User.findByIdAndDelete(req.session.currentUser._id)
         .then(() => {
             debugger
