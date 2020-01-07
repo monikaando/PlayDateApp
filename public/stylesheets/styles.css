@@ -421,7 +421,7 @@ button,
     display: flex;
     justify-content: center;
     flex-direction: row;
-    margin-top: 40px;
+    margin-top: 10px;
 }
 
 .details-image {
@@ -434,11 +434,13 @@ button,
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    margin: 0 60px;
 }
 
 .caretaker-details {
     display: flex;
     flex-direction: column;
+    margin: 0 60px;
 }
 
 
