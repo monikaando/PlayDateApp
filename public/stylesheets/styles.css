@@ -417,30 +417,30 @@ button,
 
 /*Friend detail Page*/
 
-.details {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    margin: 10px 0 30px 0;
-}
-
 .details-image {
     display: flex;
     align-items: center;
     margin-top: 50px;
 }
 
+.details {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    margin: 10px 0 30px 0;
+    flex-wrap: wrap;
+}
+
 .friend-details {
     display: flex;
     flex-direction: column;
-    margin-left: 20%;
+    flex-wrap: wrap;
 }
 
 .caretaker-details {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    margin: 0 10%;
 }
 
 .friend-page {
@@ -470,3 +470,9 @@ button,
 
 
 /*END - Friend detail Page*/
+
+
+/*Friend by day detail page*/
+
+
+/*END - Friend by day detail page*/

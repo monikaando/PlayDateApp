@@ -1,19 +1,40 @@
+<div class="friend-page">
+<div class="details-image friendcard-details">
 <img src="/{{friend.profile_pic}}" alt="">
-<p>{{friend.firstname}} {{friend.lastname}}</p>
-<p>Birthday: {{friend.birthday}}</p>
-<p>Is available to play on: {{friend.availabledays}}</p>
-<p>Likes to eat: {{friend.foodlikes}}</p>
-<p>Does not like to eat: {{friend.fooddislikes}}</p>
-<p>Important Health Details: {{friend.allergies}}</p>
-<p>Enjoys: {{friend.activitylikes}}</p>
-<p>Does not enjoy: {{friend.activitydislikes}}</p>
+</div>
+<div class="details">
+    <div class="friend-details">
+        <h2>Friend details:</h2>
+        <p><b>Name:</b> {{friend.firstname}} {{friend.lastname}}</p>
+        <p><b>Address:</b> {{friend.address}}</p>
+        <p><b>Birthday:</b> {{friend.birthday}}</p>
+        <p><b>Available to play on:</b></p>
+    <ul>
+        {{#each friend.availabledays}}
+        <li>{{this}}</li>
+        {{/each}}
+    </ul>
+        <p><b>Most favourite food:</b> {{friend.foodlikes}}</p>
+        <p><b>Least favourite food:</b> {{friend.fooddislikes}}</p>
+        <p><b>Allergies/Illnesses:</b> {{friend.allergies}}</p>
+        <p><b>Like to play:</b> {{friend.activitylikes}}</p>
+        <p><b>Does not like to play:</b> {{friend.activitydislikes}}</p>
+    </div>
 
-{{#each caretaker}}
-<p>CARETAKER</p>
-<p>Name: {{this.firstname}} {{this.lastname}}</p>
-<p>Takes care of {{friend.firstname}} on: {{this.availabledays}}</p>
-<p>Relation: {{this.relation}}</p>
-<p>Address: {{this.address}}</p>
-<p>Phone Number: {{this.phone}}</p>
-<p>Email Address: {{this.email}}</p>
-{{/each}}
+    <div class="caretaker-details"> 
+        {{#each caretaker}}
+          <h2>Caretaker details:</h2>
+          <p><b>Name:</b> {{this.firstname}} {{this.lastname}}</p>
+          <p><b>Takes care of {{friend.firstname}} on:</b></p>
+          <ul>
+            {{#each this.availabledays}}
+                <li>{{this}}</li>
+            {{/each}}
+          </ul>
+          <p><b>Relation:</b> {{this.relation}}</p>
+          <p><b>Phone Number:</b> {{this.phone}}</p>
+          <p><b>Email:</b> {{this.email}}</p>
+        {{/each}}
+    </div>
+</div>
+</div>
