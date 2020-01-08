@@ -172,7 +172,7 @@ input[type="date" i] {
     flex-direction: column;
 }
 
-form {
+.form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -228,18 +228,15 @@ button,
 
 .b-red,
 .b-red:before {
-    background: rgba(234, 110, 72, 1);
-    background: -moz-linear-gradient(45deg, rgba(234, 110, 72, 1) 0%, rgb(211, 21, 21) 100%);
-    background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(234, 110, 72, 1)), color-stop(100%, rgba(211, 21, 21)));
-    background: -webkit-linear-gradient(45deg, rgba(234, 110, 72, 1) 0%, rgba(211, 21, 21) 100%);
-    background: -o-linear-gradient(45deg, rgba(234, 110, 72, 1) 0%, rgba(211, 21, 21) 100%);
-    background: -ms-linear-gradient(45deg, rgba(234, 110, 72, 1) 0%, rgba(211, 21, 21) 100%);
-    background: linear-gradient(45deg, rgba(234, 110, 72, 1) 0%, rgba(211, 21, 21) 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#ea6e48', endColorstr='#bc1a63', GradientType=1);
+    background: rgb(250, 59, 1);
 }
 
 .rot-135:hover {
     filter: hue-rotate(135deg);
+}
+
+.change-for-blue:hover {
+    background: linear-gradient(45deg, rgba(252, 88, 39, 0.74) 0%, rgba(250, 59, 1) 100%);
 }
 
 .signup-img {
@@ -454,7 +451,11 @@ button,
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    color: #ff0202;
+    color: #ff5e00;
+}
+
+.nocaretaker {
+    color: red;
 }
 
 .friend-page {
@@ -494,7 +495,51 @@ button,
 /*END - Friend detail Page*/
 
 
-/*Friend by day detail page*/
+/*Edit Friend Page*/
+
+.edit-friend-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.edit-friend-form {
+    width: 40%;
+}
+
+.details-edit-friend-image {
+    margin-top: 40px;
+}
+
+.edit-fields {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.edit-fields input {
+    width: 100%;
+}
+
+input[type='checkbox'] {
+    margin-right: 10px;
+}
+
+.legend-edit-friend {
+    margin-right: 10px;
+}
+
+.edit-friend-availability {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+.edit-friends-av-input {
+    display: flex;
+    flex-direction: row
+}
 
 
-/*END - Friend by day detail page*/
+/*END - Edit Friend Page*/
