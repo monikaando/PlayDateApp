@@ -5,7 +5,7 @@ const createError = require('http-errors');
 
 app.get("/:day", (req, res) => {
     req.session.day = req.params.day;
-    Child.find({availabledays: req.params.day})
+    Child.find({createdby: req.session.currentUser._id, availabledays: req.params.day})
     .then(friends => {
         res.render("friends/friendsbyday", {friends});
     })
@@ -28,5 +28,3 @@ app.get("/detail/:id", (req, res) => {
 
 module.exports = app;
 
-//   
-// ^^  Jurgen's Code for looping through friends and find the caretakers
