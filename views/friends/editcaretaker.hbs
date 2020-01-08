@@ -1,0 +1,28 @@
+<div>
+<h1>Edit details about the caretaker</h1>
+<form action="/caretakers/editcaretaker/{{caretaker.id}}" method="POST">
+
+<legend>Name:</legend>
+    <input type="text" name="firstname" value="{{caretaker.firstname}}"><br>
+<legend>Last name:</legend>
+    <input type="text" name="lastname" value="{{caretaker.lastname}}"><br>
+<legend>Available to play on:</legend>
+    {{#each caretaker.availabledays}}
+        {{#if this }}
+            <input type="checkbox" checked name="availabledays" value="{{@key}}"/>{{@key}} <br> 
+            {{!--  availabledays is multiple / array --}}
+        {{else}}
+            <input type="checkbox" name="availabledays" value="{{@key}}"/>{{@key}} <br>
+            {{!--  availabledays is multiple / array --}}
+        {{/if}}
+    {{/each}}
+<legend>Relation:</legend>
+    <input type="text" name="relation" value="{{caretaker.relation}}">
+<legend>Phone:</legend>
+    <input type="tel" name="phone" value="{{caretaker.phone}}">
+<legend>Email:</legend>
+    <input type="email" name="email" value="{{caretaker.email}}">
+    <input class="button b-blue .rot-135" type="submit" class="button" >
+</form>
+
+</div>

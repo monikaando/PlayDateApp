@@ -19,7 +19,10 @@
         <p><b>Allergies/Illnesses:</b> {{friend.allergies}}</p>
         <p><b>Like to play:</b> {{friend.activitylikes}}</p>
         <p><b>Does not like to play:</b> {{friend.activitydislikes}}</p>
+         <div class="link-button">
          <a href="/friends/editfriend/{{friend.id}}" class="button b-blue .rot-135">Edit</a>
+         <a href="/friends/deletefriend/{{friend.id}}" class="button b-blue .rot-135">Delete</a>
+         </div>
     </div>
 
         {{#each friend.caretaker}}
@@ -33,7 +36,7 @@
             {{/each}}
           </ul>
           <p><b>Relation:</b> {{this.relation}}</p>
-          <p><b>Phone Number:</b> {{this.phone}}</p>
+          <p><b>Phone:</b> {{this.phone}}</p>
           <p><b>Email:</b> {{this.email}}</p>
           </div>
         {{/each}}
