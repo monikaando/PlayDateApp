@@ -1,6 +1,7 @@
 const express = require("express")
 const app = express()
 const Child = require("../models/Child")
+const Caretaker = require("../models/Caretaker")
 const mongoose = require("mongoose")
 
 app.get("/editfriend/:id", (req, res) => {
@@ -59,5 +60,20 @@ app.post("/editfriend/:id", (req, res) => {
         .catch(err => console.log(err))
 })
 
+app.get("/deletefriend/:id", (req, res) => {
+    Child.findByIdAndRemove(req.params.id)
+        .then(() => {
+            res.redirect(`/friends`)
+        })
+        .catch(err => console.log(err));
+});
+
+app.get("/deletecaretaker/:id", (req, res) => {
+    Caretaker.findByIdAndRemove(req.params.id)
+        .then(() => {
+            res.redirect(`/friends`)
+        })
+        .catch(err => console.log(err));
+});
 
 module.exports = app
