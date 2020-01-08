@@ -211,6 +211,7 @@ button,
     color: #FFF;
     text-decoration: none;
     width: 100%;
+    text-align: center;
 }
 
 .b-blue,
@@ -467,6 +468,14 @@ button,
     padding: 30px;
     margin: 9px 3px;
     border-radius: 5px;
+}
+
+.link-button {
+    display: flex;
+}
+
+.link-button a {
+    margin-right: 20px;
 }
 
 

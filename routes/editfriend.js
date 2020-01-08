@@ -54,8 +54,8 @@ app.post("/editfriend/:id", (req, res) => {
     }
 
     Child.findByIdAndUpdate(childId, updatedChild, { new: true })
-        .then(() => {
-            res.redirect(`/friends`)
+        .then((newChild) => {
+            res.redirect(`/friends/${newChild.id}`)
         })
         .catch(err => console.log(err))
 })
