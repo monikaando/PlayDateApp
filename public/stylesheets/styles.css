@@ -365,12 +365,6 @@ button,
 
 /* Friend Card */
 
-.friend-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .allfriendcards {
     display: flex;
     flex-wrap: wrap;
@@ -423,31 +417,62 @@ button,
 
 /*Friend detail Page*/
 
-.details {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    margin-top: 10px;
-}
-
 .details-image {
     display: flex;
     align-items: center;
     margin-top: 50px;
 }
 
+.details {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    margin: 10px 0 30px 0;
+    flex-wrap: wrap;
+}
+
 .friend-details {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    margin: 0 60px;
 }
 
 .caretaker-details {
     display: flex;
     flex-direction: column;
-    margin: 0 60px;
+    flex-wrap: wrap;
+}
+
+.friend-page {
+    display: flex;
+    flex-direction: column;
+}
+
+.friendcard-details {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.friendcard-details img {
+    width: 100%;
+    border-radius: 5px;
+    width: 230px;
+    height: 250px;
+    border: 2px solid #293a80;
+    background-color: rgba(125, 181, 245, 0.199);
+    padding: 30px;
+    margin: 9px 3px;
+    border-radius: 5px;
 }
 
 
 /*END - Friend detail Page*/
+
+
+/*Friend by day detail page*/
+
+
+/*END - Friend by day detail page*/
