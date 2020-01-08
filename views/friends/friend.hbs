@@ -19,25 +19,35 @@
         <p><b>Allergies/Illnesses:</b> {{friend.allergies}}</p>
         <p><b>Like to play:</b> {{friend.activitylikes}}</p>
         <p><b>Does not like to play:</b> {{friend.activitydislikes}}</p>
-         <a href="/friends/editfriend/{{friend.id}}" class="button b-blue .rot-135">Edit</a>
+        <a href="/friends/editfriend/{{friend.id}}" class="button b-blue .rot-135">Edit</a>
+        <a href="/friends/deletefriend/{{friend.id}}" class="button b-blue .rot-135">Delete</a>
     </div>
 
-        {{#each friend.caretaker}}
-            <div class="caretaker-details"> 
-          <h2>Caretaker details:</h2>
-          <p><b>Name:</b> {{this.firstname}} {{this.lastname}}</p>
-          <p><b>Takes care of {{friend.firstname}} on:</b></p>
-          <ul>
-            {{#each this.availabledays}}
-                <li>{{this}}</li>
+        {{#if friend.caretaker}}
+            {{#each friend.caretaker}}
+                <div class="caretaker-details"> 
+            <h2>Caretaker details:</h2>
+            <p><b>Name:</b> {{this.firstname}} {{this.lastname}}</p>
+            <p><b>Takes care of {{friend.firstname}} on:</b></p>
+            <ul>
+                {{#each this.availabledays}}
+                    <li>{{this}}</li>
+                {{/each}}
+            </ul>
+            <p><b>Relation:</b> {{this.relation}}</p>
+            <p><b>Phone Number:</b> {{this.phone}}</p>
+            <p><b>Email:</b> {{this.email}}</p>
+            <a href="/friends/addcaretaker/{{friend.id}}" class="button b-blue .rot-135">Add</a>
+            <a href="/friends/deletecaretaker/{{this.id}}" class="button b-blue .rot-135">Delete</a>
+            </div>
+            
             {{/each}}
-          </ul>
-          <p><b>Relation:</b> {{this.relation}}</p>
-          <p><b>Phone Number:</b> {{this.phone}}</p>
-          <p><b>Email:</b> {{this.email}}</p>
-          </div>
-        {{/each}}
-    
+        {{else}}
+            <div class="caretaker-details"> 
+            <h2>No caretake avalable</h2>
+            <a href="/friends/addcaretaker/{{friend.id}}" class="button b-blue .rot-135">Add</a>
+            </div>
+        {{/if}}
 </div>
 </div>
 
