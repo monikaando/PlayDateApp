@@ -10,6 +10,7 @@ const childSchema = new Schema({
     birthday: { type: String },
     availabledays: [{
         type: String,
+        required: true,
         enum: ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
     }],
     foodlikes: { type: [String] },

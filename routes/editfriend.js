@@ -17,13 +17,16 @@ app.get("/editfriend/:id", (req, res) => {
                 sunday: false
             }
 
-            friend.availabledays.forEach((weekDay) => {
-                weekDays[weekDay] = true;
-            })
+            if (friend.availabledays) {
+                friend.availabledays.forEach((weekDay) => {
+                    weekDays[weekDay] = true;
+                })
+            }
 
-            let friendCopy = {...friend._doc }
+            let friendCopy = {...friend._doc };
             friendCopy.availabledays = weekDays;
-            debugger
+            friendCopy.id = friend.id;
+
             res.render("friends/editfriend.hbs", {
                 friend: friendCopy
             })
@@ -41,7 +44,7 @@ app.post("/editfriend/:id", (req, res) => {
         lastname: req.body.lastname,
         birthday: req.body.birthday,
         address: req.body.address,
-        availabledays: req.body.availabledays.split(","),
+        availabledays: req.body.availabledays || [],
         foodlikes: req.body.foodlikes.split(","),
         fooddislikes: req.body.fooddislikes.split(","),
         allergies: req.body.allergies.split(","),

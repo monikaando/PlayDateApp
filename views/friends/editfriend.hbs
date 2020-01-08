@@ -1,7 +1,7 @@
 <div>
 <h1>Edit details about your friend</h1>
     <div class="details-image friendcard-details">
-        <img src="/{{friend.profile_pic}}" alt="">
+        <img src="https://res.cloudinary.com/playdateapp/{{friend.profile_pic}}" alt="">
     </div>
 <form action="/friends/editfriend/{{friend.id}}" method="POST">
 
@@ -16,9 +16,11 @@
 <legend>Available to play on:</legend>
     {{#each friend.availabledays}}
         {{#if this }}
-            <input type="checkbox" checked name="{{@key}}" value="{{@key}}"/>{{@key}} <br>
+            <input type="checkbox" checked name="availabledays" value="{{@key}}"/>{{@key}} <br> 
+            {{!--  availabledays is multiple / array --}}
         {{else}}
-            <input type="checkbox" name="{{@key}}" value="{{@key}}"/>{{@key}} <br>
+            <input type="checkbox" name="availabledays" value="{{@key}}"/>{{@key}} <br>
+            {{!--  availabledays is multiple / array --}}
         {{/if}}
     {{/each}}
     {{!-- <input class="available-days-input" type="text" name="availabledays" value=" {{friend.availabledays}}"> --}}
