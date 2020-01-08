@@ -37,7 +37,6 @@ var sessionOptions = {
 app.use(session(sessionOptions));
 app.set("views", __dirname + "/views");
 hbs.registerPartials(__dirname + "/views/partials");
-// app.use(express.static(__dirname + '/uploads'));
 app.use(express.static(__dirname + '/public'));
 app.use(express.static(__dirname + '/uploads'));
 
@@ -45,8 +44,8 @@ function protect(req, res, next) {
     if (req.session.currentUser) {
         next();
     } else {
-        // req.session.redirectUrl = req.originalUrl;
-        // res.redirect("user/login")
+        req.session.redirectUrl = req.originalUrl;
+        res.redirect("user/login")
         next(createError(401, "Please log in to view this page"));
     }
 }
@@ -65,6 +64,7 @@ app.use("/", require("./routes/howitworks"));
 app.use("/user", protect, require("./routes/user"));
 app.use("/user", protect, require("./routes/deleteuser"));
 app.use("/friends", require("./routes/addfriend"));
+app.use("/friends", require("./routes/editfriend"));
 app.use("/friends", require("./routes/friendphoto"));
 app.use("/friends", require("./routes/addcaretaker"));
 app.use("/friends", require("./routes/friendslist"));
@@ -90,5 +90,6 @@ app.listen(3000, () => {
 
 //run:
 //nodemon app.js
+//nodemon --inspect app.js
 //updating also hbs files
 //nodemon app.js -e“js hbs”
