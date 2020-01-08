@@ -16,7 +16,10 @@ app.get("/", (req, res) => {
 app.get("/:id", (req, res) => {
     Child.findById(req.params.id)
     .populate("caretaker")
-    .then(friend => res.render("friends/friend", {friend}))
+    .then(friend => {
+        req.session.childID = req.params.id;
+        res.render("friends/friend", {friend});
+    })
     .catch(err => console.log(err));
     });
 
