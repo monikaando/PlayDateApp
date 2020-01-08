@@ -13,10 +13,18 @@ let options = {
     useUnifiedTypology: true
 }
 
+//OFFLINE DATABASE
 mongoose.connect("mongodb://localhost:27017/playdate", options, (err, connectionInfo) => {
     if (err) console.log(err);
     else console.log("connected to database");
 })
+
+//ONLINEDATABASE
+// mongoose.connect("mongodb+srv://Dom:sFoXtLbYoDhTdgJl@playdate-buv8t.azure.mongodb.net/playdate", options, (err, connectionInfo) => {
+//     if (err) console.log(err);
+//     else console.log("connected to database");
+// })
+
 mongoose.set('useFindAndModify', false);
 app.use(bodyParser.urlencoded({ extended: false }));
 
