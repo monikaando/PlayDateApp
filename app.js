@@ -1,12 +1,14 @@
 const express = require("express");
 const hbs = require("hbs")
-var bodyParser = require('body-parser')
+const bodyParser = require('body-parser')
 const mongoose = require("mongoose")
 const app = express();
 const bcrypt = require("bcrypt");
 const saltRounds = 10;
 const createError = require('http-errors')
-var session = require('express-session')
+const session = require('express-session')
+
+
 
 let options = {
     useNewUrlParser: true,
@@ -14,23 +16,22 @@ let options = {
 }
 
 //OFFLINE DATABASE
-mongoose.connect("mongodb://localhost:27017/playdate", options, (err, connectionInfo) => {
-    if (err) console.log(err);
-    else console.log("connected to database");
-})
-
-//ONLINEDATABASE
-// mongoose.connect("mongodb+srv://Dom:sFoXtLbYoDhTdgJl@playdate-buv8t.azure.mongodb.net/playdate", options, (err, connectionInfo) => {
+// mongoose.connect("mongodb://localhost:27017/playdate", options, (err, connectionInfo) => {
 //     if (err) console.log(err);
 //     else console.log("connected to database");
 // })
+
+// ONLINEDATABASE
+mongoose.connect("mongodb+srv://Dom:sFoXtLbYoDhTdgJl@playdate-buv8t.azure.mongodb.net/playdate", options, (err, connectionInfo) => {
+    if (err) console.log(err);
+    else console.log("connected to database");
+})
 
 mongoose.set('useFindAndModify', false);
 app.use(bodyParser.urlencoded({ extended: false }));
 
 
 app.set('view engine', 'hbs');
-var session = require('express-session')
 var sessionOptions = {
     secret: 'keyboard cat',
     cookie: {}
