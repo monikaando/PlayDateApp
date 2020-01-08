@@ -67,6 +67,7 @@ app.use("/friends", require("./routes/addfriend"));
 app.use("/friends", require("./routes/editfriend"));
 app.use("/friends", require("./routes/friendphoto"));
 app.use("/friends", require("./routes/addcaretaker"));
+app.use("/friends", require("./routes/editcaretaker"));
 app.use("/friends", require("./routes/friendslist"));
 app.use("/day", require("./routes/day"));
 
@@ -85,7 +86,7 @@ app.listen(3000, () => {
 
 // install:
 // npm init -y
-// npm install mongoose express hbs body-parser express-session http-errors slick-carousel mongoose-bcrypt --s
+// npm install mongoose express hbs body-parser express-session http-errors mongoose-bcrypt cloudinary multer-storage-cloudinary multer --s
 // sudo npm install nodemon -g
 
 //run:
