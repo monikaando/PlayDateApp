@@ -7,6 +7,7 @@ app.get("/addfriend", (req, res) => {
     res.render("friends/addfriend");
 });
 app.post("/addfriend", (req, res, next) => {
+    debugger;
     Child.create({
             firstname: req.body.firstname,
             lastname: req.body.lastname,
@@ -18,6 +19,7 @@ app.post("/addfriend", (req, res, next) => {
             allergies: req.body.allergies.split(","),
             activitylikes: req.body.activitylikes.split(","),
             activitydislikes: req.body.activitydislikes.split(","),
+            createdby: req.session.currentUser._id,
         })
         .then((child) => {
             req.session.childID = child._id;

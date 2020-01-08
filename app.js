@@ -8,8 +8,6 @@ const saltRounds = 10;
 const createError = require('http-errors')
 const session = require('express-session')
 
-
-
 let options = {
     useNewUrlParser: true,
     useUnifiedTypology: true
@@ -30,7 +28,6 @@ mongoose.connect("mongodb+srv://Dom:sFoXtLbYoDhTdgJl@playdate-buv8t.azure.mongod
 mongoose.set('useFindAndModify', false);
 app.use(bodyParser.urlencoded({ extended: false }));
 
-
 app.set('view engine', 'hbs');
 var sessionOptions = {
     secret: 'keyboard cat',
@@ -43,7 +40,6 @@ hbs.registerPartials(__dirname + "/views/partials");
 // app.use(express.static(__dirname + '/uploads'));
 app.use(express.static(__dirname + '/public'));
 app.use(express.static(__dirname + '/uploads'));
-
 
 function protect(req, res, next) {
     if (req.session.currentUser) {
@@ -83,18 +79,14 @@ app.use((err, req, res, next) => {
     res.render("error", err);
 })
 
-
 app.listen(3000, () => {
     console.log("Webserver is listening");
 });
-
-
 
 // install:
 // npm init -y
 // npm install mongoose express hbs body-parser express-session http-errors slick-carousel mongoose-bcrypt --s
 // sudo npm install nodemon -g
-
 
 //run:
 //nodemon app.js
