@@ -226,6 +226,18 @@ button,
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#0576ff', endColorstr='#24f8ff', GradientType=1);
 }
 
+.b-red,
+.b-red:before {
+    background: rgba(234, 110, 72, 1);
+    background: -moz-linear-gradient(45deg, rgba(234, 110, 72, 1) 0%, rgb(211, 21, 21) 100%);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(234, 110, 72, 1)), color-stop(100%, rgba(211, 21, 21)));
+    background: -webkit-linear-gradient(45deg, rgba(234, 110, 72, 1) 0%, rgba(211, 21, 21) 100%);
+    background: -o-linear-gradient(45deg, rgba(234, 110, 72, 1) 0%, rgba(211, 21, 21) 100%);
+    background: -ms-linear-gradient(45deg, rgba(234, 110, 72, 1) 0%, rgba(211, 21, 21) 100%);
+    background: linear-gradient(45deg, rgba(234, 110, 72, 1) 0%, rgba(211, 21, 21) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#ea6e48', endColorstr='#bc1a63', GradientType=1);
+}
+
 .rot-135:hover {
     filter: hue-rotate(135deg);
 }
@@ -442,7 +454,7 @@ button,
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    color: #ff5e00;
+    color: #ff0202;
 }
 
 .friend-page {
@@ -474,8 +486,8 @@ button,
     display: flex;
 }
 
-.link-button a {
-    margin-right: 20px;
+.dlt {
+    margin-left: 20px;
 }
 
 
