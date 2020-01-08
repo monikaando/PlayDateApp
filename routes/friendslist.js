@@ -4,7 +4,7 @@ const Child = require("../models/Child");
 const createError = require('http-errors');
 
 app.get("/", (req, res) => {
-    Child.find({})
+    Child.find({createdby: req.session.currentUser._id})
     .then(friends => {    
     res.render("friends/friendslist", {friends});
 })

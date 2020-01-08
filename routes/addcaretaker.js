@@ -16,7 +16,8 @@ app.post("/addcaretaker", (req, res, next) => {
             relation: req.body.relation,
             address: req.body.address,
             phone: req.body.phone,
-            email: req.body.email
+            email: req.body.email,
+            createdby: req.session.currentUser._id
         })
         .then((caretaker) => {
             debugger;

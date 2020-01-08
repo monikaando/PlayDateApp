@@ -7,7 +7,8 @@ const caretakerSchema = new Schema({
     availabledays: [{ type: String }],
     relation: { type: String },
     phone: { type: String, required: false },
-    email: { type: String, required: true }
+    email: { type: String, required: true },
+    createdby: {type: String}
 })
 
 const Caretaker = mongoose.model("caretakers", caretakerSchema);
