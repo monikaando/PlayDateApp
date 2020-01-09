@@ -16,12 +16,6 @@
     padding-bottom: 25%;
 }
 
-.days {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
 .day {
     font-size: 1.2em;
     display: flex;
@@ -43,3 +37,32 @@
     border: 2px solid rgb(247, 118, 140);
     background-color: rgba(255, 145, 163, 0.199);
 }
+
+@media (max-width:766px) {
+    .index-page {
+        height: 100%;
+    }
+    h2 {
+        margin-top: 20px;
+        font-size: 20px;
+    }
+    .day-blocks {
+        margin-top: 0;
+        padding-bottom: 30px;
+    }
+    .day {
+        width: 130px;
+        padding: 50px 0;
+        background-color: rgba(125, 181, 245, 0.733);
+    }
+    .weekend {
+        border: 2px solid rgb(247, 118, 140);
+        background-color: rgba(255, 145, 163, 0.801);
+    }
+}
+
+@media(min-width:767px) and (max-width:960px) {}
+
+@media(min-width:961px) and (max-width:1024px) {}
+
+@media(min-width:1025px) {}

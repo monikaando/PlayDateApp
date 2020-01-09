@@ -13,3 +13,19 @@
     right: 5%;
     z-index: -1;
 }
+
+@media (max-width:766px) {
+    .howitworks {
+        width: 90%;
+    }
+    .img-description {
+        width: 100%;
+        top: 5%
+    }
+}
+
+@media(min-width:767px) and (max-width:960px) {}
+
+@media(min-width:961px) and (max-width:1024px) {}
+
+@media(min-width:1025px) {}

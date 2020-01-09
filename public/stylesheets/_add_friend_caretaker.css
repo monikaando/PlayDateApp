@@ -18,6 +18,10 @@
     margin: 20px 0;
 }
 
+.birthday {
+    margin: 0;
+}
+
 .available-days {
     display: flex;
     align-items: center;
@@ -33,13 +37,10 @@
 .add-img-friend {
     display: flex;
     justify-content: flex-end;
-}
-
-.add-img-friend {
-    width: 35%;
+    width: 22%;
     position: absolute;
-    top: 50%;
-    right: 5%;
+    top: 55%;
+    left: 3%;
     z-index: -1;
 }
 
@@ -59,3 +60,57 @@ input[type="date" i] {
 
 
 /*END - Add a Friend and a Caretaker*/
+
+
+/*Add friend photo page*/
+
+.add-photo-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.add-photo-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.add-photo-form-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.add-photo-form-image img {
+    width: 100%;
+}
+
+
+/*END - Add friend photo page*/
+
+@media (max-width:766px) {
+    /*Add Friend Form*/
+    .form-fields-add {
+        width: 80%;
+        margin-bottom: 60px;
+    }
+    .add-img-friend,
+    .add-img-caretaker {
+        display: none;
+    }
+    /*END - Add Friend Form*/
+    /*Add photo of Friend Form*/
+    .add-photo-form-image img {
+        width: 85%;
+    }
+    /*END - Add photo of Friend Form*/
+}
+
+@media(min-width:767px) and (max-width:960px) {}
+
+@media(min-width:961px) and (max-width:1024px) {}
+
+@media(min-width:1025px) {}

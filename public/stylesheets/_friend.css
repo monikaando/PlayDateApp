@@ -31,23 +31,20 @@
 /*END - Friend card*/
 
 
-/*Add friend photo page*/
+/*Friends list page*/
 
-.add-photo-form {
+.friendslist {
     display: flex;
-    justify-content: center;
-    margin-top: 50px;
-}
-
-.add-photo-form-image {
-    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    margin-top: 50px;
+}
+
+.friendslist h1 {
+    margin-bottom: 40px;
 }
 
 
-/*END - Add friend photo page*/
+/*END - Friends list page*/
 
 
 /*Friend detail Page*/
@@ -118,3 +115,25 @@
 
 
 /*END - Friend detail Page*/
+
+@media (max-width:766px) {
+    .friendslist h1 {
+        margin-bottom: 15px;
+    }
+    .allfriendcards {
+        margin-top: 20px;
+    }
+    .details {
+        justify-content: flex-start;
+        margin: 10px 0 30px 10%;
+    }
+    .caretaker-details {
+        margin-top: 20px;
+    }
+}
+
+@media(min-width:767px) and (max-width:960px) {}
+
+@media(min-width:961px) and (max-width:1024px) {}
+
+@media(min-width:1025px) {}

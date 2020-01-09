@@ -50,3 +50,19 @@ input[type='checkbox'] {
 
 
 /*END - Edit Friend and CaretakerPage*/
+
+@media (max-width:766px) {
+    .details-edit-friend-image {
+        margin-top: 0;
+    }
+    .edit-friend-form,
+    .edit-caretaker-form {
+        width: 80%;
+    }
+}
+
+@media(min-width:767px) and (max-width:960px) {}
+
+@media(min-width:961px) and (max-width:1024px) {}
+
+@media(min-width:1025px) {}

@@ -1,3 +1,5 @@
+<div class="friendslist">
+<h1>All your friends</h1>
 <div class="filter">
 <form action="/friends/search" method="POST">
 <select name="firstname" id="">
@@ -8,7 +10,7 @@
 <input type="submit">
 </form>
 </div>
-
+</div>
 <div class="allfriendcards">
 {{#each friends}}
 {{> friend}}

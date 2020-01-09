@@ -94,3 +94,25 @@ button,
     width: 40%;
     margin-top: 2%;
 }
+
+@media (max-width:766px) {
+    .form-fields {
+        width: 62%;
+    }
+    .signup-img img {
+        width: 90%;
+        height: 60%;
+        margin: 4% 2% 0 0;
+    }
+    .login-img img {
+        width: 92%;
+        height: 50%;
+        margin-top: 2%;
+    }
+}
+
+@media(min-width:767px) and (max-width:960px) {}
+
+@media(min-width:961px) and (max-width:1024px) {}
+
+@media(min-width:1025px) {}
