@@ -58,22 +58,26 @@ app.post("/editfriend/:id", (req, res) => {
             res.redirect(`/friends`)
         })
         .catch(err => console.log(err))
-})
+});
 
 app.get("/deletefriend/:id", (req, res) => {
-    Child.findByIdAndRemove(req.params.id)
-        .then(() => {
-            res.redirect(`/friends`)
+        Child.findById(req.params.id)
+        .then((child) => {
+        Caretaker.findByIdAndDelete(toString(child.caretaker[0]));
         })
+        .then(() => Child.findByIdAndDelete(req.params.id)
+        )
+        .then(() => res.redirect(`/friends`)
+        )
         .catch(err => console.log(err));
-});
+    });
 
 app.get("/deletecaretaker/:id", (req, res) => {
     Caretaker.findByIdAndRemove(req.params.id)
         .then(() => {
-            res.redirect(`/friends`)
+            res.redirect(`/friends`);
         })
         .catch(err => console.log(err));
 });
 
-module.exports = app
+module.exports = app;
