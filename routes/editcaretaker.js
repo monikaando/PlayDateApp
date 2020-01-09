@@ -49,8 +49,8 @@ app.post("/editcaretaker/:id", (req, res) => {
         createdby: req.session.currentUser.id
     }
     Caretaker.findByIdAndUpdate(caretakerId, updatedCaretaker, { new: true })
-        .then((newCaretaker) => {
-            res.redirect(`/friends/${newCaretaker.id}`)
+        .then(() => {
+            res.redirect(`/friends/${req.session.childID}`)
         })
         .catch(err => console.log(err))
 })

@@ -87,7 +87,7 @@ app.listen(3000, () => {
 
 // install:
 // npm init -y
-// npm install mongoose express hbs body-parser express-session http-errors mongoose-bcrypt cloudinary multer-storage-cloudinary multer dotenv--s
+// npm install mongoose express hbs body-parser express-session http-errors mongoose-bcrypt cloudinary multer-storage-cloudinary multer dotenv --s
 // sudo npm install nodemon -g
 
 //run:
