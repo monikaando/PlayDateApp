@@ -63,7 +63,11 @@ app.post("/editfriend/:id", (req, res) => {
 app.get("/deletefriend/:id", (req, res) => {
         Child.findById(req.params.id)
         .then((child) => {
-        Caretaker.findByIdAndDelete(toString(child.caretaker[0]));
+            var promises = [];
+         for (i = 0; i < child.caretaker.length; i++){
+             promises.push(Caretaker.findByIdAndDelete(child.caretaker[i]));
+         }
+         Promise.all(promises);
         })
         .then(() => Child.findByIdAndDelete(req.params.id)
         )
