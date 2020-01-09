@@ -1,3 +1,14 @@
+<div class="filter">
+<form action="/friends/search" method="POST">
+<select name="firstname" id="">
+        {{#each friends}}
+            <option value="{{this._id}}">{{this.firstname}}</option>
+        {{/each}}
+    </select>
+<input type="submit">
+</form>
+</div>
+
 <div class="allfriendcards">
 {{#each friends}}
 {{> friend}}
