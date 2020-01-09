@@ -21,7 +21,7 @@
         <p><b>Does not like to play:</b> {{friend.activitydislikes}}</p>
  <div class="link-button">
         <a href="/friends/editfriend/{{friend.id}}" class="button b-blue rot-135">Edit</a>
-        <a href="/friends/deletefriend/{{friend.id}}" class="button b-red rot-135 dlt">Delete</a>
+        <a href="/friends/deletefriend/{{friend.id}}" class="button b-red change-for-blue dlt">Delete</a>
 </div>
     </div>
 
@@ -42,15 +42,13 @@
             <a href="/friends/editcaretaker/{{friend.id}}" class="button b-blue rot-135">Edit</a>
              <div class="link-button">
             <a href="/friends/addcaretaker/{{friend.id}}" class="button b-blue rot-135 ">Add</a>
-            <a href="/friends/deletecaretaker/{{this.id}}" class="button b-red rot-135 dlt">Delete</a>
+            <a href="/friends/deletecaretaker/{{this.id}}" class="button b-red change-for-blue dlt">Delete</a>
             </div>
             </div>
             {{/each}}
         {{else}}
-
             <div class="caretaker-details"> 
-
-            <h2>No caretaker avalable</h2>
+            <h2 class="nocaretaker">No caretaker avalable</h2>
             <a href="/friends/addcaretaker/" class="button b-blue .rot-135">Add</a>
             </div>
         {{/if}}

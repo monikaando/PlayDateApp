@@ -1,41 +1,64 @@
-<div>
+<div class="edit-friend-page">
 <h1>Edit details about your friend</h1>
-    <div class="details-image friendcard-details">
+    <div class="details-edit-friend-image friendcard-details">
         <img src="https://res.cloudinary.com/playdateapp/{{friend.profile_pic}}" alt="">
     </div>
-<form action="/friends/editfriend/{{friend.id}}" method="POST">
-
-<legend>Name:</legend>
-    <input type="text" name="firstname" value="{{friend.firstname}}"><br>
-<legend>Last name:</legend>
-    <input type="text" name="lastname" value="{{friend.lastname}}"><br>
-<legend>Address:</legend>
+<form class="edit-friend-form" action="/friends/editfriend/{{friend.id}}" method="POST">
+<div class="edit-fields">
+<legend class="legend-edit-friend">Name:</legend>
+    <input type="text" name="firstname" value="{{friend.firstname}}">
+</div>
+<div class="edit-fields">
+<legend class="legend-edit-friend">Last name:</legend>
+    <input type="text" name="lastname" value="{{friend.lastname}}">
+</div>
+<div class="edit-fields">
+<legend class="legend-edit-friend">Address:</legend>
     <input type="text" name="address" value="{{friend.address}}">
-<legend>Birthday:</legend>
+</div>
+<div class="edit-fields">
+<legend class="legend-edit-friend">Birthday:</legend>
     <input type="date" name="birthday" value="{{friend.birthday}}">
-<legend>Available to play on:</legend>
+</div>
+<div class="edit-friend-availability">
+<legend class="legend-edit-friend">Available to play on:</legend>
     {{#each friend.availabledays}}
         {{#if this }}
-            <input type="checkbox" checked name="availabledays" value="{{@key}}"/>{{@key}} <br> 
+        <div class="edit-friends-av-input">
+            <input type="checkbox" checked name="availabledays" value="{{@key}}"/>{{@key}}  
+        </div>
             {{!--  availabledays is multiple / array --}}
         {{else}}
-            <input type="checkbox" name="availabledays" value="{{@key}}"/>{{@key}} <br>
+        <div class="edit-friends-av-input">
+            <input type="checkbox" name="availabledays" value="{{@key}}"/>{{@key}} 
+        </div>
             {{!--  availabledays is multiple / array --}}
         {{/if}}
     {{/each}}
-    {{!-- <input class="available-days-input" type="text" name="availabledays" value=" {{friend.availabledays}}"> --}}
-<legend>Most favourite food:</legend>
+</div>   
+<div class="edit-fields">
+<legend class="legend-edit-friend">Most favourite food:</legend>
     <input type="text" name="foodlikes" value="{{friend.foodlikes}}">
-<legend>Least favourite food:</legend>
+    </div>
+    <div class="edit-fields">
+<legend class="legend-edit-friend">Least favourite food:</legend>
     <input type="text" name="fooddislikes" value="{{friend.fooddislikes}}">
-<legend>Allergies/Illnesses:</legend>
+    </div>
+    <div class="edit-fields">
+<legend class="legend-edit-friend">Allergies/Illnesses:</legend>
     <input type="text" name="allergies" value="{{friend.allergies}}">
-<legend>Like to play:</legend>
+</div>
+<div class="edit-fields">
+<legend class="legend-edit-friend">Like to play:</legend>
     <input type="text" name="activitylikes" value="{{friend.activitylikes}}">
-<legend>Does not like to play:</legend>
+</div>
+<div class="edit-fields">
+<legend class="legend-edit-friend">Does not like to play:</legend>
     <input type="text" name="activitydislikes" value="{{friend.activitydislikes}}">
-
+</div>
     <input class="button b-blue .rot-135" type="submit" class="button" >
+    
 </form>
+
 
 </div>

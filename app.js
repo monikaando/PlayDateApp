@@ -7,6 +7,7 @@ const bcrypt = require("bcrypt");
 const saltRounds = 10;
 const createError = require('http-errors')
 const session = require('express-session')
+require("dotenv").config();
 
 let options = {
     useNewUrlParser: true,
@@ -20,7 +21,7 @@ let options = {
 // })
 
 // ONLINEDATABASE
-mongoose.connect("mongodb+srv://Dom:sFoXtLbYoDhTdgJl@playdate-buv8t.azure.mongodb.net/playdate", options, (err, connectionInfo) => {
+mongoose.connect(process.env.db, options, (err, connectionInfo) => {
     if (err) console.log(err);
     else console.log("connected to database");
 })
@@ -86,7 +87,7 @@ app.listen(3000, () => {
 
 // install:
 // npm init -y
-// npm install mongoose express hbs body-parser express-session http-errors mongoose-bcrypt cloudinary multer-storage-cloudinary multer --s
+// npm install mongoose express hbs body-parser express-session http-errors mongoose-bcrypt cloudinary multer-storage-cloudinary multer dotenv--s
 // sudo npm install nodemon -g
 
 //run:
