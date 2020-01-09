@@ -1,27 +1,42 @@
-<div>
+<div class="edit-caretaker-page">
 <h1>Edit details about the caretaker</h1>
-<form class="form" action="/caretakers/editcaretaker/{{caretaker.id}}" method="POST">
-
+<form class="edit-caretaker-form" action="/caretakers/editcaretaker/{{caretaker.id}}" method="POST">
+<div class="edit-fields">
 <legend>Name:</legend>
-    <input type="text" name="firstname" value="{{caretaker.firstname}}"><br>
+    <input type="text" name="firstname" value="{{caretaker.firstname}}">
+</div>
+<div class="edit-fields">
 <legend>Last name:</legend>
-    <input type="text" name="lastname" value="{{caretaker.lastname}}"><br>
+    <input type="text" name="lastname" value="{{caretaker.lastname}}">
+</div>
+<div class="edit-caretaker-availability">
 <legend>Available to play on:</legend>
     {{#each caretaker.availabledays}}
         {{#if this }}
-            <input type="checkbox" checked name="availabledays" value="{{@key}}"/>{{@key}} <br> 
+        <div class="edit-caretakers-av-input">
+            <input type="checkbox" checked name="availabledays" value="{{@key}}"/>{{@key}}
+        </div>
             {{!--  availabledays is multiple / array --}}
         {{else}}
-            <input type="checkbox" name="availabledays" value="{{@key}}"/>{{@key}} <br>
+        <div class="edit-caretakers-av-input">
+            <input type="checkbox" name="availabledays" value="{{@key}}"/>{{@key}}
+        </div>
             {{!--  availabledays is multiple / array --}}
         {{/if}}
     {{/each}}
+</div>
+<div class="edit-fields">
 <legend>Relation:</legend>
     <input type="text" name="relation" value="{{caretaker.relation}}">
+</div>
+<div class="edit-fields">
 <legend>Phone:</legend>
     <input type="tel" name="phone" value="{{caretaker.phone}}">
+</div>
+<div class="edit-fields">
 <legend>Email:</legend>
     <input type="email" name="email" value="{{caretaker.email}}">
+</div>
     <input class="button b-blue .rot-135" type="submit" class="button" >
 </form>
 

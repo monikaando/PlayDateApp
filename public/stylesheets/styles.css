@@ -499,9 +499,10 @@ button,
 /*END - Friend detail Page*/
 
 
-/*Edit Friend Page*/
+/*Edit Friend and Caretaker Page*/
 
-.edit-friend-page {
+.edit-friend-page,
+.edit-caretaker-page {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -509,8 +510,9 @@ button,
     margin-top: 20px;
 }
 
-.edit-friend-form {
-    width: 40%;
+.edit-friend-form,
+.edit-caretaker-form {
+    width: 21%;
 }
 
 .details-edit-friend-image {
@@ -534,16 +536,18 @@ input[type='checkbox'] {
     margin-right: 10px;
 }
 
-.edit-friend-availability {
+.edit-friend-availability,
+.edit-caretaker-availability {
     display: flex;
     flex-direction: column;
     margin: 10px 0;
 }
 
-.edit-friends-av-input {
+.edit-friends-av-input,
+.edit-caretakers-av-input {
     display: flex;
     flex-direction: row
 }
 
 
-/*END - Edit Friend Page*/
+/*END - Edit Friend and CaretakerPage*/
