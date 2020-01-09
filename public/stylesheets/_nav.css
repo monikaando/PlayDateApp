@@ -1,0 +1,25 @@
+.navigation {
+    color: #f7f9f9;
+    background-color: #293a80;
+    margin: 0;
+    padding: 20px 20px 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-content: flex-start;
+    list-style-type: none;
+    box-shadow: 0 4px 4px -2px gray;
+}
+
+.navigation div {
+    display: flex;
+    flex-direction: row;
+}
+
+.navigation-link {
+    text-decoration: none;
+    color: #f7f9f9;
+    margin: 10px 40px 10px 0;
+}
+
+@media(min-width:1025px) {}

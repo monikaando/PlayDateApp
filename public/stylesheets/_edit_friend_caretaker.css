@@ -1,0 +1,52 @@
+/*Edit Friend and Caretaker Page*/
+
+.edit-friend-page,
+.edit-caretaker-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.edit-friend-form,
+.edit-caretaker-form {
+    width: 21%;
+}
+
+.details-edit-friend-image {
+    margin-top: 40px;
+}
+
+.edit-fields {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.edit-fields input {
+    width: 100%;
+}
+
+input[type='checkbox'] {
+    margin-right: 10px;
+}
+
+.legend-edit-friend {
+    margin-right: 10px;
+}
+
+.edit-friend-availability,
+.edit-caretaker-availability {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+.edit-friends-av-input,
+.edit-caretakers-av-input {
+    display: flex;
+    flex-direction: row
+}
+
+
+/*END - Edit Friend and CaretakerPage*/

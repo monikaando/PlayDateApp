@@ -1,0 +1,96 @@
+.form-details {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-title {
+    display: flex;
+    justify-content: center;
+    padding: 50px 0 30px;
+    color: #293a80;
+}
+
+.form-fields {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+
+input {
+    padding: 6px;
+    margin: 2% 0;
+    font-size: 0.9em;
+    border-radius: 5px;
+    border: 1px solid rgb(223, 223, 223);
+}
+
+button,
+.button {
+    display: inline-block;
+    font-size: 1em;
+    margin-top: 30px;
+    padding: 10px 0;
+    border-radius: 5px;
+    transition: all .5s;
+    filter: hue-rotate(0deg);
+    color: #FFF;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+}
+
+.b-blue,
+.b-blue:before {
+    background: rgba(5, 118, 255, 1);
+    background: -moz-linear-gradient(45deg, rgba(5, 118, 255, 1) 0%, rgba(36, 248, 255, 1) 100%);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(5, 118, 255, 1)), color-stop(100%, rgba(36, 248, 255, 1)));
+    background: -webkit-linear-gradient(45deg, rgba(5, 118, 255, 1) 0%, rgba(36, 248, 255, 1) 100%);
+    background: -o-linear-gradient(45deg, rgba(5, 118, 255, 1) 0%, rgba(36, 248, 255, 1) 100%);
+    background: -ms-linear-gradient(45deg, rgba(5, 118, 255, 1) 0%, rgba(36, 248, 255, 1) 100%);
+    background: linear-gradient(45deg, rgba(5, 118, 255, 1) 0%, rgba(36, 248, 255, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#0576ff', endColorstr='#24f8ff', GradientType=1);
+}
+
+.b-red,
+.b-red:before {
+    background: rgb(250, 59, 1);
+}
+
+.rot-135:hover {
+    filter: hue-rotate(135deg);
+}
+
+.change-for-blue:hover {
+    background: linear-gradient(45deg, rgba(252, 88, 39, 0.74) 0%, rgba(250, 59, 1) 100%);
+}
+
+.signup-img {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.signup-img img {
+    width: 35%;
+    margin-right: 10%;
+}
+
+.login-page {
+    background: none;
+}
+
+.login-img {
+    display: flex;
+    justify-content: center;
+}
+
+.login-img img {
+    width: 40%;
+    margin-top: 2%;
+}

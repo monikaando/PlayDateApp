@@ -1,0 +1,45 @@
+.index-page {
+    height: 100vw;
+    background: url("../images/background.png") no-repeat left 100px fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.day-blocks {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 80px 5px 0 0;
+    padding-bottom: 25%;
+}
+
+.days {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.day {
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: row;
+    width: 170px;
+    padding: 70px 0;
+    margin: 40px 10px 20px 10px;
+    border: 2px solid #293a80;
+    background-color: rgba(125, 181, 245, 0.199);
+    border-radius: 2px;
+    justify-content: center;
+}
+
+.day:hover {
+    box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.weekend {
+    border: 2px solid rgb(247, 118, 140);
+    background-color: rgba(255, 145, 163, 0.199);
+}
