@@ -5,10 +5,10 @@ const Child = require("../models/Child");
 const createError = require('http-errors');
 const mongoose = require("mongoose");
 
-app.get("/addcaretaker", (req, res) => {
+app.get("/addcaretaker/", (req, res) => {
     res.render("friends/addcaretaker");
 });
-app.post("/addcaretaker", (req, res, next) => {
+app.post("/addcaretaker/", (req, res, next) => {
     Caretaker.create({
             firstname: req.body.firstname,
             lastname: req.body.lastname,
@@ -26,8 +26,8 @@ app.post("/addcaretaker", (req, res, next) => {
             );
         })
         .then(()=> {
+            res.redirect(`/friends/${req.session.childID}`);
             delete req.session.childID;
-            res.redirect("/");
         })
         .catch(error => {
             console.log(error);

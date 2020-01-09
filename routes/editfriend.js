@@ -2,7 +2,7 @@ const express = require("express")
 const app = express()
 const Child = require("../models/Child")
 const Caretaker = require("../models/Caretaker")
-const mongoose = require("mongoose")
+const cloudinary = require('cloudinary');
 
 app.get("/editfriend/:id", (req, res) => {
     Child.findById(req.params.id)
@@ -58,22 +58,31 @@ app.post("/editfriend/:id", (req, res) => {
             res.redirect(`/friends/${newChild.id}`)
         })
         .catch(err => console.log(err))
-})
+});
 
 app.get("/deletefriend/:id", (req, res) => {
-    Child.findByIdAndRemove(req.params.id)
-        .then(() => {
-            res.redirect(`/friends`)
+        Child.findById(req.params.id)
+        .then((child) => {
+            var promises = [];
+            promises.push(cloudinary.uploader.destroy(child.profile_pic));
+         for (i = 0; i < child.caretaker.length; i++){
+             promises.push(Caretaker.findByIdAndDelete(child.caretaker[i]));
+         }
+         Promise.all(promises);
         })
+        .then(() => Child.findByIdAndDelete(req.params.id)
+        )
+        .then(() => res.redirect(`/friends`)
+        )
         .catch(err => console.log(err));
-});
+    });
 
 app.get("/deletecaretaker/:id", (req, res) => {
     Caretaker.findByIdAndRemove(req.params.id)
         .then(() => {
-            res.redirect(`/friends`)
+            res.redirect(`/friends`);
         })
         .catch(err => console.log(err));
 });
 
-module.exports = app
+module.exports = app;
