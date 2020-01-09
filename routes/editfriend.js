@@ -80,7 +80,7 @@ app.get("/deletefriend/:id", (req, res) => {
 app.get("/deletecaretaker/:id", (req, res) => {
     Caretaker.findByIdAndRemove(req.params.id)
         .then(() => {
-            res.redirect(`/friends`);
+            res.redirect(`/friends/${req.session.childID}`);
         })
         .catch(err => console.log(err));
 });
