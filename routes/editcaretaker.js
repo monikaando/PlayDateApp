@@ -27,7 +27,7 @@ app.get("/editcaretaker/:id", (req, res) => {
             caretakerCopy.availabledays = weekDays;
             caretakerCopy.id = caretaker.id;
 
-            res.render("caretakers/editcaretaker.hbs", {
+            res.render("friends/editcaretaker.hbs", {
                 caretaker: caretakerCopy
             })
 
@@ -37,7 +37,6 @@ app.get("/editcaretaker/:id", (req, res) => {
 
 
 app.post("/editcaretaker/:id", (req, res) => {
-    debugger
     let caretakerId = req.params.id
     let updatedCaretaker = {
         firstname: req.body.firstname,
@@ -47,12 +46,11 @@ app.post("/editcaretaker/:id", (req, res) => {
         address: req.body.address,
         phone: req.body.phone,
         email: req.body.email,
-        createdby: req.session.currentUser._id
+        createdby: req.session.currentUser.id
     }
-
     Caretaker.findByIdAndUpdate(caretakerId, updatedCaretaker, { new: true })
-        .then((newCaretaker) => {
-            res.redirect(`/caretakers/${newCaretaker.id}`)
+        .then(() => {
+            res.redirect(`/friends/${req.session.childID}`)
         })
         .catch(err => console.log(err))
 })

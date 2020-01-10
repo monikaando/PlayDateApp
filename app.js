@@ -62,14 +62,18 @@ app.get('/', (req, res, next) => {
 app.use("/", require("./routes/signup"));
 app.use("/", require("./routes/login"));
 app.use("/", require("./routes/howitworks"));
+
 app.use("/user", protect, require("./routes/user"));
 app.use("/user", protect, require("./routes/deleteuser"));
+app.use("/user", protect, require("./routes/edituser"));
+
 app.use("/friends", require("./routes/addfriend"));
 app.use("/friends", require("./routes/editfriend"));
 app.use("/friends", require("./routes/friendphoto"));
 app.use("/friends", require("./routes/addcaretaker"));
 app.use("/friends", require("./routes/editcaretaker"));
 app.use("/friends", require("./routes/friendslist"));
+
 app.use("/day", require("./routes/day"));
 
 app.use("/", (req, res, next) => {
@@ -83,11 +87,15 @@ app.use((err, req, res, next) => {
 
 app.listen(3000, () => {
     console.log("Webserver is listening");
-});
+})
+
+// app.listen(process.env.PORT, () => {
+//     console.log("Webserver is listening");
+// });
 
 // install:
 // npm init -y
-// npm install mongoose express hbs body-parser express-session http-errors mongoose-bcrypt cloudinary multer-storage-cloudinary multer dotenv--s
+// npm install mongoose express hbs body-parser express-session http-errors mongoose-bcrypt cloudinary multer-storage-cloudinary multer dotenv --s
 // sudo npm install nodemon -g
 
 //run:

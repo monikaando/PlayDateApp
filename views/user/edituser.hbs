@@ -1,0 +1,18 @@
+<form class="form" action="/user/edituser" method="POST">
+<div class="form-fields">
+    <h1 class="form-title">Enter a New Password</h1>
+    <input type="password" name="password" placeholder="********">
+    <button class= "b-blue rot-135" type="submit">Change Password</button>
+
+{{#if errorMessage }}
+    <div class="error-message">{{ errorMessage }}</div>
+  {{/if}}
+ <p class="account-message">
+    You will be redirected to log in again.</a>
+  </p>
+  </div>
+</form>
+
+<div class="login-img">
+<img src="/images/kids.png" alt="">
+</div>

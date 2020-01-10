@@ -1,0 +1,48 @@
+.error-img {
+    display: flex;
+    justify-content: center;
+}
+
+.error-img img {
+    width: 60vw;
+    margin-top: 10%;
+}
+
+.red {
+    display: flex;
+    justify-content: center;
+    font-size: 3em;
+}
+
+.error-page {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: rgb(212, 0, 0);
+}
+
+.error-description {
+    text-decoration: underline;
+}
+
+.error-message {
+    background: #F02B63;
+    box-sizing: border-box;
+    border-radius: 4px;
+    color: #fff;
+    margin: 20px auto;
+    padding: 10px;
+    width: 100%;
+    font-size: 0.7em;
+    text-align: center;
+    line-height: 1.5em;
+}
+
+.account-message {
+    font-size: 0.8em;
+    color: #757575;
+}
+
+.account-message a {
+    color: #757575;
+}
