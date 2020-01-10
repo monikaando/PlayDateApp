@@ -5,11 +5,18 @@
     flex-direction: column;
 }
 
+.wrap-text {
+    width: 40%;
+}
+
 .profile-buttons {
     width: 20%;
 }
 
 @media (max-width:766px) {
+    .wrap-text {
+        width: 90%;
+    }
     .profile-buttons {
         width: 90%;
     }
