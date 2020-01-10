@@ -7,8 +7,16 @@ app.get("/addfriend", (req, res) => {
     res.render("friends/addfriend");
 });
 app.post("/addfriend", (req, res, next) => {
-    debugger;
-    Child.create({
+    Child.findOne({ "createdby": req.session.currentUser._id, "firstname": req.body.firstname, "lastname": req.body.lastname })
+    .then(result => {
+        if (result !== null) {
+            res.render("friends/addfriend", {
+                errorMessage: "This friend is already in your freinds list!"
+            });
+            return;
+        }})
+    .then(() => {
+        return Child.create({
             firstname: req.body.firstname,
             lastname: req.body.lastname,
             birthday: req.body.birthday,
@@ -20,7 +28,8 @@ app.post("/addfriend", (req, res, next) => {
             activitylikes: req.body.activitylikes.split(","),
             activitydislikes: req.body.activitydislikes.split(","),
             createdby: req.session.currentUser._id,
-        })
+        });
+    })
         .then((child) => {
             req.session.childID = child._id;
         })
