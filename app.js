@@ -41,6 +41,15 @@ hbs.registerPartials(__dirname + "/views/partials");
 app.use(express.static(__dirname + '/public'));
 app.use(express.static(__dirname + '/uploads'));
 
+function protect(req, res, next) {
+    if (req.session.currentUser) {
+        next();
+    } else {
+        req.session.redirectUrl = req.originalUrl;
+        res.redirect("user/login")
+        next(createError(401, "Please log in to view this page"));
+    }
+}
 app.use((req, res, next) => {
     if (req.session.currentUser) {
         res.locals.user = req.session.currentUser;
