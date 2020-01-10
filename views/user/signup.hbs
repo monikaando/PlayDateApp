@@ -1,8 +1,8 @@
 <form class="form" action="/signup" method="POST">
 <div class="form-fields">
     <h1 class="form-title">Sign up</h1>
-    <input type="text" name="username" placeholder="username">
-    <input type="password" name="password" placeholder="********">
+    <input type="text" name="username"  minlength="3" placeholder="username">
+    <input type="password" name="password" minlength="5" placeholder="********">
     <button class= "b-blue rot-135" type="submit">Create account</button>
 
 {{#if errorMessage }}

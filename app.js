@@ -53,14 +53,18 @@ app.get('/', (req, res, next) => {
 app.use("/", require("./routes/signup"));
 app.use("/", require("./routes/login"));
 app.use("/", require("./routes/howitworks"));
-app.use("/user", require("./routes/user"));
-app.use("/user", require("./routes/deleteuser"));
+
+app.use("/user", protect, require("./routes/user"));
+app.use("/user", protect, require("./routes/deleteuser"));
+app.use("/user", protect, require("./routes/edituser"));
+
 app.use("/friends", require("./routes/addfriend"));
 app.use("/friends", require("./routes/editfriend"));
 app.use("/friends", require("./routes/friendphoto"));
 app.use("/friends", require("./routes/addcaretaker"));
 app.use("/friends", require("./routes/editcaretaker"));
 app.use("/friends", require("./routes/friendslist"));
+
 app.use("/day", require("./routes/day"));
 
 app.use("/", (req, res, next) => {
