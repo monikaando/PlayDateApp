@@ -6,7 +6,7 @@ const createError = require('http-errors');
 const bcryptSalt = 10;
 
 app.get("/edituser", (req, res) => {
-    res.render("user/edituser.hbs")
+    res.render("user/edituser.hbs");
 })
 
 app.post("/edituser", (req, res) => {
