@@ -39,10 +39,13 @@
             <p><b>Relation:</b> {{this.relation}}</p>
             <p><b>Phone Number:</b> {{this.phone}}</p>
             <p><b>Email:</b> {{this.email}}</p>
+            <div class="wide-button">
             <a href="/friends/editcaretaker/{{this.id}}" class="button b-blue rot-135">Edit</a>
-             <div class="link-button">
+            </div>
+            <div class="link-button wide-button">
             <a href="/friends/addcaretaker/{{friend.id}}" class="button b-blue rot-135 ">Add</a>
             <a href="/friends/deletecaretaker/{{this.id}}" class="button b-red change-for-blue dlt">Delete</a>
+            </div>
             </div>
             </div>
             {{/each}}

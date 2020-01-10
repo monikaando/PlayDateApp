@@ -106,7 +106,7 @@ button,
     }
     .login-img img {
         width: 92%;
-        height: 50%;
+        height: 100%;
         margin-top: 2%;
     }
 }

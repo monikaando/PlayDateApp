@@ -23,6 +23,8 @@
 
 .error-description {
     text-decoration: underline;
+    text-align: center;
+    line-height: 1.5em;
 }
 
 .error-message {
@@ -46,3 +48,17 @@
 .account-message a {
     color: #757575;
 }
+
+@media (max-width:766px) {
+    .error-img img {
+        width: 100vw;
+        height: 100%;
+        margin-top: 10%;
+    }
+}
+
+@media(min-width:767px) and (max-width:960px) {}
+
+@media(min-width:961px) and (max-width:1024px) {}
+
+@media(min-width:1025px) {}
