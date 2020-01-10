@@ -77,6 +77,12 @@ input[type="date" i] {
     margin-top: 50px;
 }
 
+.skip-link {
+    color: #293a80;
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
 .add-photo-form-image {
     display: flex;
     align-items: center;

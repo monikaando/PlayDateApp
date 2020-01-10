@@ -130,6 +130,9 @@
     .caretaker-details {
         margin-top: 20px;
     }
+    .wide-button {
+        display: flex;
+    }
 }
 
 @media(min-width:767px) and (max-width:960px) {}

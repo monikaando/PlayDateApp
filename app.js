@@ -41,15 +41,6 @@ hbs.registerPartials(__dirname + "/views/partials");
 app.use(express.static(__dirname + '/public'));
 app.use(express.static(__dirname + '/uploads'));
 
-function protect(req, res, next) {
-    if (req.session.currentUser) {
-        next();
-    } else {
-        req.session.redirectUrl = req.originalUrl;
-        res.redirect("user/login")
-        next(createError(401, "Please log in to view this page"));
-    }
-}
 app.use((req, res, next) => {
     if (req.session.currentUser) {
         res.locals.user = req.session.currentUser;
@@ -62,8 +53,8 @@ app.get('/', (req, res, next) => {
 app.use("/", require("./routes/signup"));
 app.use("/", require("./routes/login"));
 app.use("/", require("./routes/howitworks"));
-app.use("/user", protect, require("./routes/user"));
-app.use("/user", protect, require("./routes/deleteuser"));
+app.use("/user", require("./routes/user"));
+app.use("/user", require("./routes/deleteuser"));
 app.use("/friends", require("./routes/addfriend"));
 app.use("/friends", require("./routes/editfriend"));
 app.use("/friends", require("./routes/friendphoto"));
@@ -81,13 +72,13 @@ app.use((err, req, res, next) => {
     res.render("error", err);
 })
 
-// app.listen(3000, () => {
-//     console.log("Webserver is listening");
-// })
-
-app.listen(process.env.PORT, () => {
+app.listen(3000, () => {
     console.log("Webserver is listening");
-});
+})
+
+// app.listen(process.env.PORT, () => {
+//     console.log("Webserver is listening");
+// });
 
 // install:
 // npm init -y

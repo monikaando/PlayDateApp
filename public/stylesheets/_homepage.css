@@ -1,10 +1,7 @@
 .index-page {
-    height: 100vw;
-    background: url("../images/background.png") no-repeat left 100px fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+    background: url("../images/background.png") no-repeat left top;
     background-size: cover;
+    height: 100%;
 }
 
 .day-blocks {
@@ -25,17 +22,25 @@
     margin: 40px 10px 20px 10px;
     border: 2px solid #293a80;
     background-color: rgba(125, 181, 245, 0.199);
-    border-radius: 2px;
+    border-radius: 5px;
     justify-content: center;
 }
 
 .day:hover {
     box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.1);
+    border: 2px solid #293a80;
+    background-color: #293a80;
+    color: white;
 }
 
 .weekend {
     border: 2px solid rgb(247, 118, 140);
     background-color: rgba(255, 145, 163, 0.199);
+}
+
+.weekend:hover {
+    border: 2px solid rgb(247, 118, 140);
+    background-color: rgb(247, 118, 140);
 }
 
 @media (max-width:766px) {
