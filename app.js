@@ -62,14 +62,18 @@ app.get('/', (req, res, next) => {
 app.use("/", require("./routes/signup"));
 app.use("/", require("./routes/login"));
 app.use("/", require("./routes/howitworks"));
+
 app.use("/user", protect, require("./routes/user"));
 app.use("/user", protect, require("./routes/deleteuser"));
+app.use("/user", protect, require("./routes/edituser"));
+
 app.use("/friends", require("./routes/addfriend"));
 app.use("/friends", require("./routes/editfriend"));
 app.use("/friends", require("./routes/friendphoto"));
 app.use("/friends", require("./routes/addcaretaker"));
 app.use("/friends", require("./routes/editcaretaker"));
 app.use("/friends", require("./routes/friendslist"));
+
 app.use("/day", require("./routes/day"));
 
 app.use("/", (req, res, next) => {
@@ -81,13 +85,13 @@ app.use((err, req, res, next) => {
     res.render("error", err);
 })
 
-// app.listen(3000, () => {
-//     console.log("Webserver is listening");
-// })
-
-app.listen(process.env.PORT, () => {
+app.listen(3000, () => {
     console.log("Webserver is listening");
-});
+})
+
+// app.listen(process.env.PORT, () => {
+//     console.log("Webserver is listening");
+// });
 
 // install:
 // npm init -y

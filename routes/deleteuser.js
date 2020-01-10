@@ -2,7 +2,7 @@ const express = require("express")
 const app = express()
 const User = require("../models/User")
 
-app.get("/:id", (req, res) => {
+app.get("/deleteuser", (req, res) => {
     User.findByIdAndDelete(req.session.currentUser._id)
         .then(() => {
             debugger
