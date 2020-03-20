@@ -9,4 +9,13 @@ Login: test | password: qwaszx
 
 ----------------------------
 
+How does the PlayDateApp work?
+Do you know this feeling when your child wants to meet with his/her friends and you must check their availability by write to their parents everytime?
+
+PlayDateApp is the solution!
+You can organize data about your kid's friends right here! right now! It's a piece of a cake!
+
+Enter the availability of your kid's friends in the application to check when they can play together.
+
+
 
