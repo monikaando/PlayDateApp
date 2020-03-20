@@ -19,13 +19,13 @@ Enter the availability of your kid's friends in the application to check when th
 
 You can keep note of other useful information, like:
 
-details about a friend
+* details about a friend
 
-photo of your friend
+* photo of your friend
 
-caretaker with contact details
+* caretaker with contact details
 
-...and much more
+* ...and much more
 
 Created by: Monika Swidzinska and Dominik Antunovic - two students of Ironhack Bootcamp in Amsterdam.
 
