@@ -14,6 +14,7 @@ Database of your kid's friends for tracking their availability.
 
 * MongoDB 
 
+You can check the application here:
 http://play-date-app.herokuapp.com/
 
 Login: test | password: qwaszx 
