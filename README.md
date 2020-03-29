@@ -2,6 +2,9 @@
 
 The first second project during Ironhack bootcamp. 
 Database of your kid's friends for tracking their availability. 
+
+Stack:
+
 * HTML
 
 * JavaScript
