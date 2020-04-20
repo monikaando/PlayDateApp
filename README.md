@@ -1,8 +1,9 @@
-# PlayDateApp
+PlayDateApp
 
 The second project during Ironhack bootcamp. 
 Database of your kid's friends for tracking their availability. 
-
+<br><b>Screenshots from the app below.</b>
+<br>
 Stack:
 
 * HTML
