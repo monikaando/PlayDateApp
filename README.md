@@ -1,6 +1,6 @@
 # PlayDateApp
 
-The first second project during Ironhack bootcamp. 
+The second project during Ironhack bootcamp. 
 Database of your kid's friends for tracking their availability. 
 
 Stack:
@@ -44,5 +44,5 @@ You can keep note of other useful information, like:
 
 Created by: Monika Swidzinska and Dominik Antunovic - two students of Ironhack Bootcamp in Amsterdam.
 
-Created by: 10.01.2020
+Created: 10.01.2020
 
