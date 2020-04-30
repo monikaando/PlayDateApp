@@ -23,7 +23,7 @@
         "express-sessions": "^1.0.6",
         "hbs": "^4.0.6",
         "http-errors": "^1.7.3",
-        "jquery": "^3.4.1",
+        "jquery": "^3.5.0",
         "moment": "^2.24.0",
         "mongoose": "^5.8.6",
         "mongoose-bcrypt": "^1.6.0",
